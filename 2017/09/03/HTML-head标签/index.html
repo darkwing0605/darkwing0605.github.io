@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="darkwing0605">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="HTML head标签"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Dark Wing"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Dark Wing" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Dark Wing</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">HTML head标签</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/darkwing0605">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:2553292615@qq.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By darkwing0605</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2017-09-03</span>
+            <span class="time">22:29:19</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/coding/">coding</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/HTML/">#HTML</a> <a class="tag" href="/tags/head标签/">#head标签</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>HTML head标签下使用的标签和元素有很多，本文通过归纳总结head中各个标签和元素的意义以及使用的场景，最终达到达到了解每个标签、正确使用每个标签的目的<br>持续更新ing</p>
+<a id="more"></a>
+<h2 id="DOCTYPE"><a href="#DOCTYPE" class="headerlink" title="DOCTYPE"></a>DOCTYPE</h2><p>DOCTYPE(Document Type)，该声明位于文档中最前面的位置，处于 html 标签之前，此标签告知浏览器文档使用哪种 HTML 或者 XHTML 规范。</p>
+<p>DTD(Document Type Definition) 声明以 &lt;!DOCTYPE&gt; 开始，不区分大小写，前面没有任何内容，如果有其他内容(空格除外)会使浏览器在 IE 下开启怪异模式(quirks mode)渲染网页。</p>
+<p>公共 DTD，名称格式为注册//组织//类型 标签//语言</p>
+<blockquote>
+<p>注册：指组织是否由国际标准化组织(ISO)注册，+表示是，-表示不是。<br>组织：即组织名称，如：W3C。<br>类型：一般是 DTD。<br>标签：标签是指定公开文本描述，即对所引用的公开文本的唯一描述性名称，后面可附带版本号。<br>语言：语言是 DTD 语言的 ISO 639 语言标识符，如：EN 表示英文，ZH 表示中文。</p>
+</blockquote>
+<p>具体DTD模型</p>
+<blockquote>
+<p>HTML 4.01 strict</p>
+<blockquote>
+<p>严格：包含所有HTML元素和属性，但不包括展示性的和弃用的元素（font）,不允许框架集（Framesets）<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>HTML 4.01 Transitional</p>
+<blockquote>
+<p>过渡：包含所有HTML元素和属性，包括展示性的和弃用的元素，不允许框架集，现在90%都使用这个<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>HTML 4.01 Frameset</p>
+<blockquote>
+<p>框架：等同于HTML 4.01Transitional，但允许框架集内容<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>XHTML 1.0</p>
+<blockquote>
+<p>包含所有HTML元素和属性，包括展示性的和弃用的元素，不允许框架集，必须以格式正确的XML来编写标记<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>HTML 5</p>
+<blockquote>
+<p>html5当中只是用一种类型的DOCTYPE，现在大部分网站都使用HTML5的DOCTYPE<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+</blockquote>
+<p>在 HTML中 doctype 有两个主要目的。</p>
+<blockquote>
+<p>对文档进行有效性验证。</p>
+<blockquote>
+<p>它告诉用户代理和校验器这个文档是按照什么 DTD 写的。这个动作是被动的，每次页面加载时，浏览器并不会下载 DTD 并检查合法性，只有当手动校验页面时才启用。</p>
+</blockquote>
+<p>决定浏览器的呈现模式</p>
+<blockquote>
+<p>对于实际操作，通知浏览器读取文档时用哪种解析算法。如果没有写，则浏览器则根据自身的规则对代码进行解析，可能会严重影响 html 排版布局。<br>浏览器有三种方式解析 HTML 文档。</p>
+<blockquote>
+<p>非怪异（标准）模式<br>怪异模式<br>部分怪异（近乎标准）模式 *</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <!-- 20170814 -->
+  <div class="row">
+  	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" id="statistics" style="position:absolute;top:180px;left:30px"><script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=55rwupqghxb&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script></div>
+  </div>
+  <!-- 20170814 -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
