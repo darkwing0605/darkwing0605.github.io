@@ -8,74 +8,58 @@
 
 <url>
   <loc>http://www.dark-wing.com/</loc>
-  <changefreq>always</changefreq>
+  <lastmod>2017-09-17T10:10:06+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.dark-wing.com/archives/</loc>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>http://www.dark-wing.com/2017/09/23/MusicPlayer-by-React/</loc>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>http://www.dark-wing.com/categories/Project/</loc>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>http://www.dark-wing.com/tags/React/</loc>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>http://www.dark-wing.com/tags/webpack/</loc>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>http://www.dark-wing.com/tags/jPlayer/</loc>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>http://www.dark-wing.com/tags/pubsub-js/</loc>
-  <changefreq>always</changefreq>
+  <lastmod>2017-09-17T10:10:06+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.dark-wing.com/2017/09/17/Gallery-by-React/</loc>
-  <changefreq>always</changefreq>
+  <lastmod>2017-09-17T10:10:06+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.dark-wing.com/categories/Project/</loc>
+  <lastmod>2017-09-17T10:10:06+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.dark-wing.com/tags/React/</loc>
+  <lastmod>2017-09-17T10:10:06+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.dark-wing.com/tags/webpack/</loc>
+  <lastmod>2017-09-17T10:10:06+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.dark-wing.com/categories/coding/</loc>
-  <changefreq>always</changefreq>
+  <lastmod>2017-09-17T10:10:06+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.dark-wing.com/tags/HTML/</loc>
-  <changefreq>always</changefreq>
+  <lastmod>2017-09-17T10:10:06+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.dark-wing.com/2017/08/12/my-first-blog/</loc>
-  <changefreq>always</changefreq>
+  <lastmod>2017-09-17T10:10:06+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.dark-wing.com/categories/test/</loc>
-  <changefreq>always</changefreq>
+  <lastmod>2017-09-17T10:10:06+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.dark-wing.com/tags/test/</loc>
-  <changefreq>always</changefreq>
+  <lastmod>2017-09-17T10:10:06+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.dark-wing.com/tags/bash/</loc>
-  <changefreq>always</changefreq>
+  <lastmod>2017-09-17T10:10:06+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.dark-wing.com/2017/08/10/hello-world/</loc>
-  <changefreq>always</changefreq>
-</url>
-<url>
-  <loc>http://www.dark-wing.com/MusicPlayer-by-React/</loc>
-  <changefreq>always</changefreq>
+  <lastmod>2017-09-17T10:10:06+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.dark-wing.com/gallery-by-react/</loc>
-  <changefreq>always</changefreq>
+  <lastmod>2017-09-17T08:51:16+00:00</lastmod>
 </url>
 </urlset>
