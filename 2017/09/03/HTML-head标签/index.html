@@ -127,7 +127,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2017-09-03</span>
-            <span class="time">21:37:55</span>
+            <span class="time">10:13:01</span>
           </span>
           
           <!--  Categories  -->
@@ -209,9 +209,24 @@
 <blockquote>
 <p><a href="https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry" target="_blank" rel="external">IANA registry</a><br>其中</p>
 <blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">%%</div><div class="line">Type: language</div><div class="line">Subtag: zh</div><div class="line">Description: Chinese</div><div class="line">Added: 2005-10-16</div><div class="line">Scope: macrolanguage</div><div class="line">%%</div><div class="line">Type: extlang</div><div class="line">Subtag: cmn</div><div class="line">Description: Mandarin Chinese</div><div class="line">Added: 2009-07-29</div><div class="line">Preferred-Value: cmn</div><div class="line">Prefix: zh</div><div class="line">Macrolanguage: zh</div><div class="line">%%</div><div class="line">Type: script</div><div class="line">Subtag: Hans</div><div class="line">Description: Han (Simplified variant)</div><div class="line">Added: 2005-10-16</div></pre></td></tr></table></figure></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">%%</div><div class="line">Type: language</div><div class="line">Subtag: zh</div><div class="line">Description: Chinese</div><div class="line">Added: 2005-10-16</div><div class="line">Scope: macrolanguage</div><div class="line">%%</div><div class="line">Type: extlang</div><div class="line">Subtag: cmn</div><div class="line">Description: Mandarin Chinese</div><div class="line">Added: 2009-07-29</div><div class="line">Preferred-Value: cmn</div><div class="line">Prefix: zh</div><div class="line">Macrolanguage: zh</div><div class="line">%%</div><div class="line">Type: script</div><div class="line">Subtag: Hans</div><div class="line">Description: Han (Simplified variant)</div><div class="line">Added: 2005-10-16</div></pre></td></tr></table></figure>
 </blockquote>
 </blockquote>
+</blockquote>
+<h2 id="使用浏览器版本"><a href="#使用浏览器版本" class="headerlink" title="使用浏览器版本"></a>使用浏览器版本</h2><h3 id="优先使用IE最新版本和Chrome"><a href="#优先使用IE最新版本和Chrome" class="headerlink" title="优先使用IE最新版本和Chrome"></a>优先使用IE最新版本和Chrome</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;</div></pre></td></tr></table></figure>
+<h3 id="360浏览器使用谷歌浏览器内嵌框架-Google-Chrome-Frame-GCF"><a href="#360浏览器使用谷歌浏览器内嵌框架-Google-Chrome-Frame-GCF" class="headerlink" title="360浏览器使用谷歌浏览器内嵌框架(Google Chrome Frame, GCF)"></a>360浏览器使用谷歌浏览器内嵌框架(Google Chrome Frame, GCF)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot; /&gt;</div></pre></td></tr></table></figure>
+<p>为了保险起见再加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;</div></pre></td></tr></table></figure></p>
+<p>这样如果安装了GCF，则使用GCF来渲染页面，如果没有安装，则使用最新版本的IE内核来进行渲染</p>
+<h2 id="禁止百度转码"><a href="#禁止百度转码" class="headerlink" title="禁止百度转码"></a>禁止百度转码</h2><p>通过百度手机打开网页时，百度有可能会对你的网页进行转码，因此可以加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta http-equiv=&quot;Cache-Control&quot; content=&quot;no-siteapp&quot; /&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h2><p>页面标题&lt;title&gt;标签<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;title&gt;your title&lt;/title&gt;</div></pre></td></tr></table></figure></p>
+<p>页面关键词keywords<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;keywords&quot; content=&quot;your keywords&quot;&gt;</div></pre></td></tr></table></figure></p>
+<p>页面描述内容description<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;description&quot; content=&quot;your description&quot;&gt;</div></pre></td></tr></table></figure></p>
+<p>定义网页作者author<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;author&quot; content=&quot;author&quot;&gt;</div></pre></td></tr></table></figure></p>
+<p>定义网页搜索引擎索引方式，通常有如下几种取值</p>
+<blockquote>
+<p>follow：跟踪链接并分析目标网页。这是默认行为，并且可忽略。<br>index：将网页编入索引。这是默认行为，并且可忽略。<br>noodp：不使用 Open Directory Project 来创建内容描述。<br>noydir：不使用 Yahoo Directory 来创建内容描述。<br>noarchive：不允许搜索引擎显示内容的缓存版本。<br>cache：允许搜索引擎显示内容的缓存版本。<br>nocache：不允许搜索引擎显示内容的缓存版本。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;robots&quot; content=&quot;index, follow&quot;&gt;</div></pre></td></tr></table></figure>
 
         </div>
       </div>
