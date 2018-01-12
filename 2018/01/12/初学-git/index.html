@@ -5,11 +5,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="secret">
+  <meta name="description" content="">
   <meta name="author" content="darkwing0605">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="secret test"/>
-  <meta property="og:description" content="secret" />
+  <meta property="og:title" content="初学 git"/>
+  <meta property="og:description" content="Dark Wing&amp;apos;s Personal Website" />
   <meta property="og:site_name" content="Dark Wing"/>
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://www.dark-wing.com"/>
@@ -21,7 +21,7 @@
   
 
   <!-- Site Title -->
-  <title>Dark Wing-secret test</title>
+  <title>Dark Wing-初学 git</title>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -69,7 +69,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">secret test</p>
+          <p class="title">初学 git</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -127,9 +127,15 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2017-10-25</span>
-            <span class="time">18:44:34</span>
+            <span class="date">2018-01-12</span>
+            <span class="time">18:44:35</span>
           </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/coding/">coding</a>
+</span>
           
         </div>
         <!-- Tags -->
@@ -137,42 +143,125 @@
           <div class="post-tags text-muted">
             Tags: 
 
-<a class="tag" href="/tags/secret/">#secret</a>
+<a class="tag" href="/tags/git/">#git</a>
 
 
           </div>
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <script src=/js/crypto-js.js></script><script>
-function doDecrypt(pwd, onError) {
-	console.log("in doDecrypt");
-	var txt = document.getElementById("enc_content").innerHTML;
-	var plantext;
-	try {
-	  	var bytes = CryptoJS.AES.decrypt(txt, pwd);
-		plaintext = bytes.toString(CryptoJS.enc.Utf8);
-	} catch(err) {
-		if(onError) {onError(err);}
-		return;
-	}
-	document.getElementById("enc_content").innerHTML = plaintext;
-	document.getElementById("enc_content").style.display = "block";
-   document.getElementById("enc_passwd").style.display = "none";
-}
-</script>
-<div id="enc_content" style="display:none">U2FsdGVkX1+WXbjAQyYEw/nUQhpP2yycPYS5DhFLx9b6ro+qU7tc+9bRL0hHJUh3ZStpP7o3XgA7kbbHlOw0F5Dxijv9oTzUqymDopy5Mjw=</div><div id="enc_passwd"> <input id="enc_pwd_input" type="text" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
-<script>
-var onError = function(error) {
-	document.getElementById("enc_error").innerHTML = "password error!"
-};
-function decrypt() {
-var passwd = document.getElementById("enc_pwd_input").value;
-console.log(passwd);
-doDecrypt(passwd, onError);
-}
-</script>
-</div>
+          <p>git 初学笔记</p>
+<a id="more"></a>
+<h2 id="常见混淆"><a href="#常见混淆" class="headerlink" title="常见混淆"></a>常见混淆</h2><p>git</p>
+<blockquote>
+<p>版本管理工具</p>
+</blockquote>
+<p>GitHub</p>
+<blockquote>
+<p>最大的代码托管平台</p>
+<blockquote>
+<p>开源<br>收费</p>
+</blockquote>
+</blockquote>
+<p>GitLab</p>
+<blockquote>
+<p>开源软件，可以搭建自己的代码管理平台</p>
+</blockquote>
+<h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">工作目录 -&gt; `git add .` -&gt; 暂存区 -&gt; `git commit -m &apos;&apos; ` -&gt; 版本仓库（本地仓库） -&gt; `git push` -&gt; 远程仓库</div></pre></td></tr></table></figure>
+<h2 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h2><h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p><code>git init</code></p>
+<blockquote>
+<p>初始化版本库</p>
+</blockquote>
+<p><code>git clone &lt;项目地址&gt;</code></p>
+<blockquote>
+<p>克隆一个项目</p>
+</blockquote>
+<p><code>git pull origin master</code></p>
+<blockquote>
+<p>pull</p>
+</blockquote>
+<p><code>git add &lt;文件&gt;</code></p>
+<blockquote>
+<p>添加到提交清单</p>
+</blockquote>
+<p><code>git status</code></p>
+<blockquote>
+<p>查看文件状态</p>
+</blockquote>
+<p><code>git commit -m &quot;提交原因&quot;</code></p>
+<blockquote>
+<p>提交</p>
+</blockquote>
+<p><code>git push origin master</code></p>
+<blockquote>
+<p>push</p>
+</blockquote>
+<p><code>git status</code> </p>
+<blockquote>
+<p>查看当前状态</p>
+</blockquote>
+<p><code>git commit -am &#39;&#39;</code></p>
+<blockquote>
+<p>不经过缓存区直接提交（工作目录 -&gt; 版本仓库）</p>
+</blockquote>
+<p>代码冲突时</p>
+<blockquote>
+<p><code>git push origin master -f</code></p>
+<blockquote>
+<p>舍弃线上版本</p>
+</blockquote>
+<p><code>git push origin master</code></p>
+<blockquote>
+<p>保留线上版本</p>
+</blockquote>
+</blockquote>
+<h3 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h3><p><code>git log</code></p>
+<blockquote>
+<p>版本信息</p>
+<blockquote>
+<p>命令显示从最近到最远的提交日志，我们可以看到3次提交，最近的一次是 <code>append GPL</code> ，上一次是 <code>add distributed</code> ，最早的一次是 <code>wrote a readme file</code>。</p>
+</blockquote>
+</blockquote>
+<p><code>git log --pretty=oneline</code></p>
+<blockquote>
+<p>功能同上，就是简洁一点</p>
+</blockquote>
+<p>回退版本</p>
+<blockquote>
+<p>在git中，用HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。<br><code>git reset --hard HEAD^</code> 回退上一个版本<br>也可以 <code>git reset --hard &lt;版本号&gt;</code></p>
+<blockquote>
+<p>版本号没必要写全，前几位就可以了，git  会自动去找。当然也不能只写前一两位，因为 git 可能会找到多个版本号，就无法确定是哪一个了。</p>
+</blockquote>
+<p><code>git reflog</code></p>
+<blockquote>
+<p>记录每一次命令</p>
+</blockquote>
+</blockquote>
+<h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><p><code>git branch</code></p>
+<blockquote>
+<p>查看所有分支</p>
+</blockquote>
+<p><code>git branch dev</code></p>
+<blockquote>
+<p>创建 <code>dev</code> 分支</p>
+</blockquote>
+<p><code>git checkout dev</code></p>
+<blockquote>
+<p>切换到 <code>dev</code> 分支</p>
+</blockquote>
+<p><code>git checkout -b dev</code></p>
+<blockquote>
+<p>创建并切换到 <code>dev</code> 分支，相当于以上两条命令</p>
+</blockquote>
+<p><code>git branch -d dev</code></p>
+<blockquote>
+<p>删除 <code>dev</code> 分支</p>
+</blockquote>
+<p><code>git merge dev</code></p>
+<blockquote>
+<p>我们把 <code>dev</code> 分支的工作成果合并到 <code>master</code> 分支上</p>
+</blockquote>
+
 
 <!-- 20171118 -->
 <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a></div>
@@ -198,7 +287,7 @@ doDecrypt(passwd, onError);
     
 <!-- 20171030 -->
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="secret test"></div> 
+<div id="SOHUCS" sid="初学 git"></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = 'cyti5JxXc'; 
