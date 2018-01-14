@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="darkwing0605">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="[Notes]30 seconds of code-Adapter"/>
+  <meta property="og:description" content="Dark Wing&amp;apos;s Personal Website" />
+  <meta property="og:site_name" content="Dark Wing"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://www.dark-wing.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Dark Wing" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Dark Wing-[Notes]30 seconds of code-Adapter</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+  
+  <!-- 20170930 Google Console-->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7996247261670961",
+    enable_page_level_ads: true
+  });
+</script>
+
+<meta name="google-site-verification" content="oD5ewjXVO5xIeD-HOx5LlcHxqeWfTgEO2IS491uxZ8c" />
+  <!-- 20170930 -->
+  <!-- 20171007 百度统计-->
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9951afff4e34f23d370bf6958eaab534";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  <!-- 20171007 -->
+  <!-- 20180111 熊掌号 -->
+  <!-- <script src="//msite.baidu.com/sdk/c.js?appid=1589014467202518"></script> -->
+  <!-- 20180111 熊掌号 -->
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">[Notes]30 seconds of code-Adapter</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/darkwing0605">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:darkwing@dark-wing.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By darkwing0605</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2018-01-14</span>
+            <span class="time">17:34:50</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/Coding/">Coding</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/Notes/">#Notes</a> <a class="tag" href="/tags/Article/">#Article</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>本文翻译自 <code>Chalarangelo</code> 的 <a href="https://github.com/Chalarangelo/30-seconds-of-code" target="_blank" rel="external"><code>30 seconds of code</code></a>，并添加自己的学习笔记<br><em>不定期更新</em><br><strong>转载请注明</strong></p>
+<a id="more"></a>
+<h2 id="Adapter"><a href="#Adapter" class="headerlink" title="Adapter"></a>Adapter</h2><h3 id="call"><a href="#call" class="headerlink" title="call"></a>call</h3><p>给定一个关键字和一组数据，在给定一个 <code>context</code> 时调用它们，主要被用于组合。<br>使用闭包通过调用储存的参数来调用储存的关键字</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> call = <span class="function">(<span class="params">key, ...args</span>) =&gt;</span> context =&gt; context[key](...args);</div></pre></td></tr></table></figure>
+<details><br><summary>Examples</summary><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Promise</span>.resolve([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</div><div class="line">  .then(call(<span class="string">'map'</span>, x =&gt; <span class="number">2</span> * x))</div><div class="line">  .then(<span class="built_in">console</span>.log); <span class="comment">//[ 2, 4, 6 ]</span></div><div class="line"><span class="keyword">const</span> map = call.bind(<span class="literal">null</span>, <span class="string">'map'</span>);</div><div class="line"><span class="built_in">Promise</span>.resolve([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</div><div class="line">  .then(map(<span class="function"><span class="params">x</span> =&gt;</span> <span class="number">2</span> * x))</div><div class="line">  .then(<span class="built_in">console</span>.log); <span class="comment">//[ 2, 4, 6 ]</span></div></pre></td></tr></table></figure><br><br><details><br>    <summary>Note</summary><br>##### 连续箭头函数-柯里化（curry）<br>把接受多个参数的函数变换成接受一个单一参数的函数，并且返回（接受余下的参数而且返回结果的）新函数的技术<br><br>也就是说，柯里化后，将第一个参数变量存在函数里面了(闭包)，然后本来需要 n 个参数的函数可以变成只需要剩下的（n - 1个）参数就可以调用<br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 传统写法</span></div><div class="line"><span class="keyword">let</span> add = <span class="function">(<span class="params">x, y</span>) =&gt;</span> x + y;</div><div class="line">add(<span class="number">2</span>, <span class="number">3</span>);</div><div class="line"><span class="comment">// 5</span></div><div class="line"></div><div class="line"><span class="comment">// 连续箭头函数</span></div><div class="line"><span class="keyword">let</span> add = <span class="function"><span class="params">x</span> =&gt;</span> y =&gt; x + y;</div><div class="line">add(<span class="number">2</span>)(<span class="number">3</span>);</div><div class="line"><span class="comment">// 5</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> add2 = add(<span class="number">2</span>); <span class="comment">// =&gt; function(y) &#123;return 2 + y&#125;</span></div><div class="line">add2(<span class="number">3</span>);</div><div class="line"><span class="comment">// 5</span></div></pre></td></tr></table></figure><br><br>对于 <code>let test = a =&gt; b =&gt; c =&gt; {xxx}</code><br>这个函数要被调用 3 次 <code>test(a)(b)(c)</code>，前两次调用只是在传递参数，只有最后依次调用才会返回 <code>{xxx}</code> 代码段的返回值，并且在 <code>{xxx}</code> 代码段中可以调用 a, b, c<br><br>参考自 <a href="https://github.com/SimplyY/blog/blob/master/Article/%E7%BC%96%E7%A8%8B/web%20%E5%89%8D%E7%AB%AF/js%20thinking/%E5%A4%9A%E4%B8%AA%E8%BF%9E%E7%BB%AD%E7%9A%84%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9F%AF%E9%87%8C%E5%8C%96.md" target="_blank" rel="external"><code>多个连续的箭头函数与柯里化</code></a><br><br>##### 扩展语句<br>###### 语法<br>用于函数调用<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">myFunction(...iterableObj);</div></pre></td></tr></table></figure><br><br>用于数组字面量<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> [...iterableObj] = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>];</div><div class="line"></div><div class="line">[...iterableObj, <span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>];</div><div class="line"><span class="comment">// [1, 3, 5, 7, 9, 0, 2, 4, 6, 8]</span></div><div class="line"></div><div class="line">[<span class="number">0</span>, <span class="number">2</span>, ...iterableObj, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>];</div><div class="line"><span class="comment">// [0, 2, 1, 3, 5, 7, 9, 4, 6, 8]</span></div><div class="line"></div><div class="line">[...iterableObj, <span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">8</span>, ...iterableObj];</div><div class="line"><span class="comment">// [1, 3, 5, 7, 9, 0, 2, 4, 5, 6, 8, 1, 3, 5, 7, 9]</span></div></pre></td></tr></table></figure><br><br>用于对象字面量 (new in ECMAScript; stage 3 draft)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> objClone = &#123; ...obj&#125;;</div></pre></td></tr></table></figure><br><br>###### 代替apply<br>在需要使用数组作为函数的参数的情况下，通常使用 <code>Function.prototype.apply</code> 方法:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">x, y, z</span>) </span>&#123; &#125;</div><div class="line"><span class="keyword">var</span> args = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>];</div><div class="line">myFunction.apply(<span class="literal">null</span>, args);</div></pre></td></tr></table></figure><br><br>如果使用了ES6的展开运算符，你可以这么写<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">x, y, z</span>) </span>&#123; &#125;</div><div class="line"><span class="keyword">var</span> args = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>];</div><div class="line">myFunction(...args);</div></pre></td></tr></table></figure><br><br>参考自 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator" target="_blank" rel="external"><code>扩展语句- JavaScript | MDN</code></a><br><br>##### Promise<br>ES6原生提供了Promise对象，可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。<br>###### Promise.resolve<br>一般情况下我们都会使用 <code>new Promise()</code> 来创建Promises对象。<br>静态方法 <code>Promise.resolve(value)</code> 可以认为是 <code>new Promise()</code> 方法的快捷方式。<br>比如 <code>Promise.resolve(42);</code> 可以认为是以下代码的语法糖。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve</span>)</span>&#123;</div><div class="line">  resolve(<span class="number">42</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure><br><br>在这段代码中的 <code>resolve(42);</code> 会让这个Promises对象立即进入确定（即resolved）状态，并将 <code>42</code> 传递给后面then里所指定的 <code>onFulfilled</code> 函数。<br>方法 <code>Promise.resolve(value);</code> 的返回值也是一个Promises对象，所以我们可以像下面那样接着对其返回值进行 <code>.then</code> 调用。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Promise</span>.resolve(<span class="number">42</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(value);</div><div class="line">&#125;);</div></pre></td></tr></table></figure><br><br>###### .then<br>Promises对象有一个then方法，允许指定回调函数，在异步任务完成后调用。<br>比如，异步操作 <code>f1</code> 返回一个Promise对象，它的回调函数 <code>f2</code> 写法如下。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="keyword">new</span> <span class="built_in">Promise</span>(f1)).then(f2);</div></pre></td></tr></table></figure><br><br>这种写法对于多层嵌套的回调函数尤其方便<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 传统写法</span></div><div class="line">step1(<span class="function"><span class="keyword">function</span> (<span class="params">value1</span>) </span>&#123;</div><div class="line">  step2(value1, <span class="function"><span class="keyword">function</span>(<span class="params">value2</span>) </span>&#123;</div><div class="line">    step3(value2, <span class="function"><span class="keyword">function</span>(<span class="params">value3</span>) </span>&#123;</div><div class="line">      step4(value3, <span class="function"><span class="keyword">function</span>(<span class="params">value4</span>) </span>&#123;</div><div class="line">        <span class="comment">// ...</span></div><div class="line">      &#125;);</div><div class="line">    &#125;);</div><div class="line">  &#125;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// Promises的写法</span></div><div class="line">(<span class="keyword">new</span> <span class="built_in">Promise</span>(step1))</div><div class="line">  .then(step2)</div><div class="line">  .then(step3)</div><div class="line">  .then(step4);</div></pre></td></tr></table></figure><br><br>参考自 <a href="http://javascript.ruanyifeng.com/advanced/promise.html" target="_blank" rel="external"><code>JavaScript 标准参考教程（alpha）</code></a> 、 <a href="http://liubin.org/promises-book/" target="_blank" rel="external"><code>JavaScript Promise迷你书（中文版）</code></a> 、 <a href="https://wohugb.gitbooks.io/ecmascript-6/content/docs/promise.html" target="_blank" rel="external"><code>Promise对象</code></a><br></details><br></details>
+
+<h3 id="collectInto"><a href="#collectInto" class="headerlink" title="collectInto"></a>collectInto</h3><h3 id="flip"><a href="#flip" class="headerlink" title="flip"></a>flip</h3><h3 id="pipeFunctions"><a href="#pipeFunctions" class="headerlink" title="pipeFunctions"></a>pipeFunctions</h3><h3 id="promisify"><a href="#promisify" class="headerlink" title="promisify"></a>promisify</h3><h3 id="spreadOver"><a href="#spreadOver" class="headerlink" title="spreadOver"></a>spreadOver</h3>
+
+<!-- 20171118 -->
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"Dark Wing's Personal Website","bdMini":"1","bdMiniList":false,"bdPic":"Dark Wing's Personal Website","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["sqq","qzone","tsina","tqf","weixin","fbook","twi","linkedin","copy"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["sqq","qzone","tsina","tqf","weixin","fbook","twi","linkedin","copy"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!-- 20171118 -->
+
+<!-- 20171030 -->
+<!-- 实验室 -->
+<!-- <center>
+<div id="cyReward" role="cylabs" data-use="reward"></div>
+</center> -->
+<!-- 20171030 -->
+
+<!-- 20180111 熊掌号 -->
+<!-- <div style="padding-left: 17px; padding-right: 17px;">
+    <script>cambrian.render('tail')</script>
+</div> -->
+<!-- 20180111 熊掌号 -->
+
+        </div>
+      </div>
+    </div>
+    
+<!-- 20171030 -->
+<!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="[Notes]30 seconds of code-Adapter"></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = 'cyti5JxXc'; 
+var conf = 'prod_b92a4c7254fbe603176fd52ee04c6071'; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+<!-- <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cyti5JxXc"></script> -->
+<!-- 20171030 -->
+
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <!-- 20170814 -->
+  <div class="row">
+  	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" id="statistics" style="position:absolute;top:180px;left:30px"><script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=55rwupqghxb&amp;m=7&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script><!-- <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=55rwupqghxb&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script> --></div>
+  </div>
+  <!-- 20170814 -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Copyright &copy; 2017 - 2018 Dark Wing
+          冀ICP备17006927号
+        </p>
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
