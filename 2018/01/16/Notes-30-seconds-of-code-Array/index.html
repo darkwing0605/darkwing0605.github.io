@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="darkwing0605">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="[Notes]30 seconds of code-Array"/>
+  <meta property="og:description" content="Dark Wing&amp;apos;s Personal Website" />
+  <meta property="og:site_name" content="Dark Wing"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://www.dark-wing.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Dark Wing" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Dark Wing-[Notes]30 seconds of code-Array</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+  
+  <!-- 20170930 Google Console-->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7996247261670961",
+    enable_page_level_ads: true
+  });
+</script>
+
+<meta name="google-site-verification" content="oD5ewjXVO5xIeD-HOx5LlcHxqeWfTgEO2IS491uxZ8c" />
+  <!-- 20170930 -->
+  <!-- 20171007 百度统计-->
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9951afff4e34f23d370bf6958eaab534";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  <!-- 20171007 -->
+  <!-- 20180111 熊掌号 -->
+  <!-- <script src="//msite.baidu.com/sdk/c.js?appid=1589014467202518"></script> -->
+  <!-- 20180111 熊掌号 -->
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">[Notes]30 seconds of code-Array</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/darkwing0605">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:darkwing@dark-wing.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By darkwing0605</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2018-01-16</span>
+            <span class="time">21:06:08</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/Coding/">Coding</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/Notes/">#Notes</a> <a class="tag" href="/tags/Article/">#Article</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>本文翻译自 <code>Chalarangelo</code> 的 <a href="https://github.com/Chalarangelo/30-seconds-of-code" target="_blank" rel="external"><code>30 seconds of code</code></a> - <code>Array</code> 一节，并添加自己的学习笔记<br><em>不定期更新</em><br><strong>转载请注明</strong></p>
+<a id="more"></a>
+<h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><h3 id="chunk"><a href="#chunk" class="headerlink" title="chunk"></a>chunk</h3><p>把一个数组分块成指定大小的小数组。<br>使用 <code>Array.from()</code> 创建一个新的数组，它适合将要生成的块的数量。 使用 <code>Array.slice()</code> 将新数组的每个元素映射到长度为 <code>size</code> 的块。如果原始数组不能均匀分割，最后的块将包含剩余的元素。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> chunk = <span class="function">(<span class="params">arr, size</span>) =&gt;</span></div><div class="line">  <span class="built_in">Array</span>.from(&#123; <span class="attr">length</span>: <span class="built_in">Math</span>.ceil(arr.length / size) &#125;, (v, i) =&gt;</div><div class="line">    arr.slice(i * size, i * size + size)</div><div class="line">  );</div></pre></td></tr></table></figure></p>
+<details><br><summary>Examples</summary><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chunk([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>], <span class="number">2</span>); <span class="comment">// [[1,2],[3,4],[5]]</span></div></pre></td></tr></table></figure><br><br><details><br><summary>Notes</summary><br><strong>Array.from()</strong><br>语法<br>&gt; <code>Array.from(arrayLike, mapFn, thisArg)</code><br>&gt; 参数<br>&gt;&gt; arrayLike<br>&gt;&gt;&gt; 想要转换成数组的伪数组对象或可迭代对象。<br><br>&gt;&gt; mapFn (可选参数)<br>&gt;&gt;&gt; 如果指定了该参数，新数组中的每个元素会执行该回调函数。<br><br>&gt;&gt; thisArg (可选参数)<br>&gt;&gt;&gt; 可选参数，执行回调函数 mapFn 时 this 对象。<br><br>&gt;&gt; 返回值<br>&gt;&gt;&gt; 一个新的数组实例<br><br><code>Array.from()</code> 可以通过以下方式来创建数组对象：<br>&gt; 伪数组对象（拥有一个 <code>length</code> 属性和若干索引属性的任意对象）<br>&gt; 可迭代对象（可以获取对象中的元素,如 Map 和 Set 等）<br><br>生成一个数字序列<br>由于数组在每个位置都以 <code>undefined</code> 初始化，下面 <code>v</code> 的值将是 <code>undefined</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.from(&#123;<span class="attr">length</span>: <span class="number">5</span>&#125;, (v, i) =&gt; i); <span class="comment">// [0, 1, 2, 3, 4]</span></div></pre></td></tr></table></figure><br><br></details><br></details>
+
+<h3 id="compact"><a href="#compact" class="headerlink" title="compact"></a>compact</h3><h3 id="countBy"><a href="#countBy" class="headerlink" title="countBy"></a>countBy</h3><h3 id="countOccurrences"><a href="#countOccurrences" class="headerlink" title="countOccurrences"></a>countOccurrences</h3><h3 id="deepFlatten"><a href="#deepFlatten" class="headerlink" title="deepFlatten"></a>deepFlatten</h3><h3 id="difference"><a href="#difference" class="headerlink" title="difference"></a>difference</h3><h3 id="differenceWith"><a href="#differenceWith" class="headerlink" title="differenceWith"></a>differenceWith</h3><h3 id="distinctValuesOfArray"><a href="#distinctValuesOfArray" class="headerlink" title="distinctValuesOfArray"></a>distinctValuesOfArray</h3><h3 id="dropElements"><a href="#dropElements" class="headerlink" title="dropElements"></a>dropElements</h3><h3 id="dropRight"><a href="#dropRight" class="headerlink" title="dropRight"></a>dropRight</h3><h3 id="everyNth"><a href="#everyNth" class="headerlink" title="everyNth"></a>everyNth</h3><h3 id="filterNonUnique"><a href="#filterNonUnique" class="headerlink" title="filterNonUnique"></a>filterNonUnique</h3><h3 id="findLast"><a href="#findLast" class="headerlink" title="findLast"></a>findLast</h3><h3 id="flatten"><a href="#flatten" class="headerlink" title="flatten"></a>flatten</h3><h3 id="forEachRight"><a href="#forEachRight" class="headerlink" title="forEachRight"></a>forEachRight</h3><h3 id="groupBy"><a href="#groupBy" class="headerlink" title="groupBy"></a>groupBy</h3><h3 id="head"><a href="#head" class="headerlink" title="head"></a>head</h3><h3 id="indexOfAll"><a href="#indexOfAll" class="headerlink" title="indexOfAll"></a>indexOfAll</h3><h3 id="initial"><a href="#initial" class="headerlink" title="initial"></a>initial</h3><h3 id="initialize2DArray"><a href="#initialize2DArray" class="headerlink" title="initialize2DArray"></a>initialize2DArray</h3><h3 id="initializeArrayWithRange"><a href="#initializeArrayWithRange" class="headerlink" title="initializeArrayWithRange"></a>initializeArrayWithRange</h3><h3 id="initializeArrayWithValues"><a href="#initializeArrayWithValues" class="headerlink" title="initializeArrayWithValues"></a>initializeArrayWithValues</h3><h3 id="intersection"><a href="#intersection" class="headerlink" title="intersection"></a>intersection</h3><h3 id="isSorted"><a href="#isSorted" class="headerlink" title="isSorted"></a>isSorted</h3><h3 id="join"><a href="#join" class="headerlink" title="join"></a>join</h3><h3 id="last"><a href="#last" class="headerlink" title="last"></a>last</h3><h3 id="longestItem"><a href="#longestItem" class="headerlink" title="longestItem"></a>longestItem</h3><h3 id="mapObject"><a href="#mapObject" class="headerlink" title="mapObject"></a>mapObject</h3><h3 id="maxN"><a href="#maxN" class="headerlink" title="maxN"></a>maxN</h3><h3 id="minN"><a href="#minN" class="headerlink" title="minN"></a>minN</h3><h3 id="nthElement"><a href="#nthElement" class="headerlink" title="nthElement"></a>nthElement</h3><h3 id="partition"><a href="#partition" class="headerlink" title="partition"></a>partition</h3><h3 id="pick"><a href="#pick" class="headerlink" title="pick"></a>pick</h3><h3 id="pull"><a href="#pull" class="headerlink" title="pull"></a>pull</h3><h3 id="pullAtIndex"><a href="#pullAtIndex" class="headerlink" title="pullAtIndex"></a>pullAtIndex</h3><h3 id="pullAtValue"><a href="#pullAtValue" class="headerlink" title="pullAtValue"></a>pullAtValue</h3><h3 id="reducedFilter"><a href="#reducedFilter" class="headerlink" title="reducedFilter"></a>reducedFilter</h3><h3 id="remove"><a href="#remove" class="headerlink" title="remove"></a>remove</h3><h3 id="sample"><a href="#sample" class="headerlink" title="sample"></a>sample</h3><h3 id="sampleSize"><a href="#sampleSize" class="headerlink" title="sampleSize"></a>sampleSize</h3><h3 id="shuffle"><a href="#shuffle" class="headerlink" title="shuffle"></a>shuffle</h3><h3 id="similarity"><a href="#similarity" class="headerlink" title="similarity"></a>similarity</h3><h3 id="sortedIndex"><a href="#sortedIndex" class="headerlink" title="sortedIndex"></a>sortedIndex</h3><h3 id="symmetricDifference"><a href="#symmetricDifference" class="headerlink" title="symmetricDifference"></a>symmetricDifference</h3><h3 id="tail"><a href="#tail" class="headerlink" title="tail"></a>tail</h3><h3 id="take"><a href="#take" class="headerlink" title="take"></a>take</h3><h3 id="takeRight"><a href="#takeRight" class="headerlink" title="takeRight"></a>takeRight</h3><h3 id="union"><a href="#union" class="headerlink" title="union"></a>union</h3><h3 id="without"><a href="#without" class="headerlink" title="without"></a>without</h3><h3 id="zip"><a href="#zip" class="headerlink" title="zip"></a>zip</h3><h3 id="zipObject"><a href="#zipObject" class="headerlink" title="zipObject"></a>zipObject</h3>
+
+<!-- 20171118 -->
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"Dark Wing's Personal Website","bdMini":"1","bdMiniList":false,"bdPic":"Dark Wing's Personal Website","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["sqq","qzone","tsina","tqf","weixin","fbook","twi","linkedin","copy"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["sqq","qzone","tsina","tqf","weixin","fbook","twi","linkedin","copy"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!-- 20171118 -->
+
+<!-- 20171030 -->
+<!-- 实验室 -->
+<!-- <center>
+<div id="cyReward" role="cylabs" data-use="reward"></div>
+</center> -->
+<!-- 20171030 -->
+
+<!-- 20180111 熊掌号 -->
+<!-- <div style="padding-left: 17px; padding-right: 17px;">
+    <script>cambrian.render('tail')</script>
+</div> -->
+<!-- 20180111 熊掌号 -->
+
+        </div>
+      </div>
+    </div>
+    
+<!-- 20171030 -->
+<!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="[Notes]30 seconds of code-Array"></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = 'cyti5JxXc'; 
+var conf = 'prod_b92a4c7254fbe603176fd52ee04c6071'; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+<!-- <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cyti5JxXc"></script> -->
+<!-- 20171030 -->
+
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <!-- 20170814 -->
+  <div class="row">
+  	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" id="statistics" style="position:absolute;top:180px;left:30px"><script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=55rwupqghxb&amp;m=7&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script><!-- <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=55rwupqghxb&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script> --></div>
+  </div>
+  <!-- 20170814 -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Copyright &copy; 2017 - 2018 Dark Wing
+          冀ICP备17006927号
+        </p>
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
