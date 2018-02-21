@@ -6,104 +6,172 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
 <url>
   <loc>https://www.dark-wing.com/</loc>
-  <lastmod>2017-11-23T13:33:42+00:00</lastmod>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.dark-wing.com/categories/coding/</loc>
-  <lastmod>2017-11-23T13:33:42+00:00</lastmod>
+  <loc>https://www.dark-wing.com/tags/node/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dark-wing.com/tags/Comments/</loc>
-  <lastmod>2017-11-23T13:33:42+00:00</lastmod>
+  <loc>https://www.dark-wing.com/tags/crawler/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dark-wing.com/2017/10/25/secret-test/</loc>
-  <lastmod>2017-11-23T13:33:42+00:00</lastmod>
+  <loc>https://www.dark-wing.com/2018/01/16/Notes-30-seconds-of-code-Array/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dark-wing.com/tags/secret/</loc>
-  <lastmod>2017-11-23T13:33:42+00:00</lastmod>
+  <loc>https://www.dark-wing.com/tags/Notes/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dark-wing.com/2017/09/23/MusicPlayer-by-React/</loc>
-  <lastmod>2017-11-23T13:33:42+00:00</lastmod>
+  <loc>https://www.dark-wing.com/tags/Article/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.dark-wing.com/2018/01/14/Notes-30-seconds-of-code-Adapter/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.dark-wing.com/categories/Article/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.dark-wing.com/tags/git/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.dark-wing.com/2017/12/16/OnlineAuction-by-Angular4/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.dark-wing.com/categories/Project/</loc>
-  <lastmod>2017-11-23T13:33:42+00:00</lastmod>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.dark-wing.com/tags/Angular/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.dark-wing.com/tags/Bootstrap/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.dark-wing.com/tags/TypeScript/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.dark-wing.com/tags/Express/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.dark-wing.com/tags/Node-js/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.dark-wing.com/tags/Comments/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.dark-wing.com/2017/10/25/secret-test/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.dark-wing.com/tags/secret/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.dark-wing.com/2017/09/23/MusicPlayer-by-React/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.dark-wing.com/tags/React/</loc>
-  <lastmod>2017-11-23T13:33:42+00:00</lastmod>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.dark-wing.com/tags/webpack/</loc>
-  <lastmod>2017-11-23T13:33:42+00:00</lastmod>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.dark-wing.com/tags/jPlayer/</loc>
-  <lastmod>2017-11-23T13:33:42+00:00</lastmod>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.dark-wing.com/tags/pubsub-js/</loc>
-  <lastmod>2017-11-23T13:33:42+00:00</lastmod>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.dark-wing.com/2017/09/17/Gallery-by-React/</loc>
-  <lastmod>2017-11-23T13:33:42+00:00</lastmod>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dark-wing.com/tags/HTML/</loc>
-  <lastmod>2017-11-23T13:33:42+00:00</lastmod>
+  <loc>https://www.dark-wing.com/page/2/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
   <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.dark-wing.com/2017/08/12/my-first-blog/</loc>
-  <lastmod>2017-11-23T13:33:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.dark-wing.com/categories/test/</loc>
-  <lastmod>2017-11-23T13:33:42+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.dark-wing.com/tags/test/</loc>
-  <lastmod>2017-11-23T13:33:42+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.dark-wing.com/tags/bash/</loc>
-  <lastmod>2017-11-23T13:33:42+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.dark-wing.com/2017/08/10/hello-world/</loc>
-  <lastmod>2017-11-23T13:33:42+00:00</lastmod>
-  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.dark-wing.com/MusicPlayer-by-React/</loc>
-  <lastmod>2017-10-10T12:06:24+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2018-01-29T03:27:12+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.dark-wing.com/gallery-by-react/</loc>
-  <lastmod>2017-09-17T08:51:16+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2018-01-29T03:18:27+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
+<url>
+  <loc>https://www.dark-wing.com/tags/HTML/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.dark-wing.com/2017/08/12/my-first-blog/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.dark-wing.com/tags/test/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.dark-wing.com/tags/bash/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.dark-wing.com/2017/08/10/hello-world/</loc>
+  <lastmod>2018-02-07T02:27:28+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
