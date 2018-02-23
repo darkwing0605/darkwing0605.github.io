@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="darkwing0605">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="MusicPlayer by React"/>
+  <meta property="og:title" content="JavaScript 实现人机五子棋"/>
   <meta property="og:description" content="Dark Wing&amp;apos;s Personal Website" />
   <meta property="og:site_name" content="Dark Wing"/>
   <meta property="og:type" content="article" />
@@ -21,7 +21,7 @@
   
 
   <!-- Site Title -->
-  <title>Dark Wing-MusicPlayer by React</title>
+  <title>Dark Wing-JavaScript 实现人机五子棋</title>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -69,7 +69,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">MusicPlayer by React</p>
+          <p class="title">JavaScript 实现人机五子棋</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -127,14 +127,14 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2017-09-23</span>
+            <span class="date">2018-02-23</span>
             <span class="time">16:01:08</span>
           </span>
           
           <!--  Categories  -->
             <span class="categories info">Under 
 
-<a href="/categories/Project/">Project</a>
+<a href="/categories/Coding/">Coding</a>
 </span>
           
         </div>
@@ -143,21 +143,21 @@
           <div class="post-tags text-muted">
             Tags: 
 
-<a class="tag" href="/tags/React/">#React</a> <a class="tag" href="/tags/webpack/">#webpack</a> <a class="tag" href="/tags/jPlayer/">#jPlayer</a> <a class="tag" href="/tags/pubsub-js/">#pubsub-js</a>
+<a class="tag" href="/tags/AI/">#AI</a> <a class="tag" href="/tags/JavaScript/">#JavaScript</a> <a class="tag" href="/tags/Canvas/">#Canvas</a> <a class="tag" href="/tags/Game/">#Game</a> <a class="tag" href="/tags/Gomoku/">#Gomoku</a>
 
 
           </div>
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <p>使用React打造音乐播放器实践案例</p>
+          <p>本案例是一个带 AI 的五子棋人机大战程序</p>
 <a id="more"></a>
-<p><a href="https://www.dark-wing.com/MusicPlayer-by-React/"><strong>点击打开音乐播放器(Github版)</strong></a></p>
-<p><a href="https://darkwing.oschina.io/musicplayer-by-react/" target="_blank" rel="external"><strong>点击打开音乐播放器(OSchina版)</strong></a></p>
-<p>依赖文件：</p>
-<blockquote>
-<p>“ajv”: “^5.2.2”,<br>“autoprefixer”: “^7.1.4”,<br>“babel-core”: “^6.26.0”,<br>“babel-loader”: “^7.1.2”,<br>“babel-preset-env”: “^1.6.0”,<br>“babel-preset-react”: “^6.24.1”,<br>“css-loader”: “^0.28.7”,<br>“file-loader”: “^0.11.2”,<br>“html-webpack-plugin”: “^2.30.1”,<br>“json-loader”: “^0.5.7”,<br>“less”: “^2.7.2”,<br>“less-loader”: “^4.0.5”,<br>“postcss-loader”: “^2.0.6”,<br>“pubsub-js”: “^1.5.7”,<br>“react”: “^15.6.1”,<br>“react-dom”: “^15.6.1”,<br>“react-router”: “^2.0.0”,<br>“style-loader”: “^0.18.2”,<br>“url-loader”: “^0.5.9”,<br>“webpack”: “^3.6.0”,<br>“webpack-dev-server”: “^2.8.2”</p>
-</blockquote>
+<p><a href="https://www.dark-wing.com/Gomoku/"><strong>点击打开五子棋人机大战(Github版)</strong></a></p>
+<p><a href="https://darkwing.oschina.io/Gomoku/" target="_blank" rel="external"><strong>点击打开五子棋人机大战(码云版)</strong></a></p>
+<h2 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h2><p>使用 <code>Canvas</code> 绘制一个 <code>450px * 450px</code> 即 <code>15 * 15</code> 的网格棋盘、水印，以及黑白棋子。</p>
+<p>并实现在网格交叉点出落子。</p>
+<h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><p>通过建立赢法数组，遍历所有取胜的情况（包括横线、竖线、斜线、反斜线四个方向所有可能连成五子胜利的情况）。</p>
+<p>建立个人得分数组和计算机得分数组，预设每步得分，通过遍历下一步计算机得分情况，判断计算机下一步落子位置（即落子在得分最高情况位置）。</p>
 
 
 <!-- 20171118 -->
@@ -184,7 +184,7 @@
     
 <!-- 20171030 -->
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="MusicPlayer by React"></div> 
+<div id="SOHUCS" sid="JavaScript 实现人机五子棋"></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = 'cyti5JxXc'; 
