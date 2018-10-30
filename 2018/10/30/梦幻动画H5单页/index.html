@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="darkwing0605">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="梦幻动画H5单页"/>
+  <meta property="og:description" content="Dark Wing&amp;apos;s Personal Website" />
+  <meta property="og:site_name" content="Dark Wing"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://www.dark-wing.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Dark Wing" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Dark Wing-梦幻动画H5单页</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+  
+  <!-- 20170930 Google Console-->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7996247261670961",
+    enable_page_level_ads: true
+  });
+</script>
+
+<meta name="google-site-verification" content="oD5ewjXVO5xIeD-HOx5LlcHxqeWfTgEO2IS491uxZ8c" />
+  <!-- 20170930 -->
+  <!-- 20171007 百度统计-->
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9951afff4e34f23d370bf6958eaab534";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  <!-- 20171007 -->
+  <!-- 20180111 熊掌号 -->
+  <!-- <script src="//msite.baidu.com/sdk/c.js?appid=1589014467202518"></script> -->
+  <!-- 20180111 熊掌号 -->
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">梦幻动画H5单页</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/darkwing0605">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:darkwing@dark-wing.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By darkwing0605</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2018-10-30</span>
+            <span class="time">16:18:26</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/Project/">Project</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/Canvas/">#Canvas</a> <a class="tag" href="/tags/Mobile/">#Mobile</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>本项目来源于<a href="https://ke.qq.com/course/302353" target="_blank" rel="external">腾讯课堂-【Next特训班】第五期  梦幻动画 DIY 直播课</a></p>
+<a id="more"></a>
+<p><a href="https://www.dark-wing.com/magic-canvas-h5/"><strong>点击打开梦幻动画H5单页</strong></a></p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>播放音乐</p>
+<blockquote>
+<p>判断浏览器类型，如果禁止自动播放音乐就点击播放</p>
+</blockquote>
+<p>随机初始化气泡位置以及气泡大小</p>
+<p>使用 <code>requestAnimationFrame</code> 创建气泡上浮动画</p>
+<p>监听气泡是否超出视口</p>
+<p>渲染文字</p>
+<blockquote>
+<p>隐藏首屏logo<br>更换背景<br>引用 <a href="https://github.com/mattboldt/typed.js/" target="_blank" rel="external"><code>typed.js</code></a>实现文字打印效果</p>
+</blockquote>
+<p>随机创建流星和落叶，使用 <code>requestAnimationFrame</code> 创建动画</p>
+<h2 id="requestAnimationFrame"><a href="#requestAnimationFrame" class="headerlink" title="requestAnimationFrame"></a>requestAnimationFrame</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>由于 setTimeout 和 setInterval 的不精准问题，促使了 requestAnimationFrame 的诞生。 requestAnimationFrame 是专门为实现高性能的帧动画而设计的一个API，目前已在多个浏览器得到了支持，你可以把它用在 DOM 上的效果切换或者 Canvas 画布动画中。 requestAnimationFrame 并不是定时器，但和 setTimeout 很相似，在没有 requestAnimationFrame 的浏览器一般都是用setTimeout模拟。 requestAnimationFrame 跟屏幕刷新同步（大多数是 60Hz ）。如果浏览器支持 requestAnimationFrame , 则不建议使用 setTimeout 来做动画。</p>
+<p>requestAnimationFrame 的兼容使用<br>下面是我们常规使用 <code>requestAnimationFrame</code> 的兼容写法，当浏览器不兼容的 <code>requestAnimationFrame</code> 时则通过使用 <code>setTimeout</code> 来模拟实现,且设定渲染间隔为 <code>1000ms/60</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 判断是否有 requestAnimationFrame 方法，如果有则模拟实现</span></div><div class="line"><span class="built_in">window</span>.requestAnimFrame =</div><div class="line"><span class="built_in">window</span>.requestAnimationFrame ||</div><div class="line"><span class="built_in">window</span>.webkitRequestAnimationFrame ||</div><div class="line"><span class="built_in">window</span>.mozRequestAnimationFrame ||</div><div class="line"><span class="built_in">window</span>.oRequestAnimationFrame ||</div><div class="line"><span class="built_in">window</span>.msRequestAnimationFrame ||</div><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params">callback</span>) </span>&#123;</div><div class="line">    <span class="built_in">window</span>.setTimeout(callback, <span class="number">1000</span> / <span class="number">30</span>);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;认识Canvas&lt;<span class="regexp">/title&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;canvas id=<span class="string">"canvas"</span> width=<span class="string">"500"</span> height=<span class="string">"500"</span> style=<span class="string">"border: 1px solid #33"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span></div><div class="line">    &lt;script&gt;</div><div class="line">        <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'canvas'</span>);</div><div class="line">        <span class="keyword">var</span> context = canvas.getContext(<span class="string">'2d'</span>);</div><div class="line">        <span class="comment">// 兼容定义 requestAnimFrame</span></div><div class="line">        <span class="built_in">window</span>.requestAnimFrame =</div><div class="line">        <span class="built_in">window</span>.requestAnimationFrame ||</div><div class="line">        <span class="built_in">window</span>.webkitRequestAnimationFrame ||</div><div class="line">        <span class="built_in">window</span>.mozRequestAnimationFrame ||</div><div class="line">        <span class="built_in">window</span>.oRequestAnimationFrame ||</div><div class="line">        <span class="built_in">window</span>.msRequestAnimationFrame ||</div><div class="line">        <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>) </span>&#123;</div><div class="line">            <span class="built_in">window</span>.setTimeout(callback, <span class="number">1000</span> / <span class="number">30</span>);</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        <span class="comment">// 绘制的圆的对象</span></div><div class="line">        <span class="keyword">var</span> circle = &#123;</div><div class="line">            x: <span class="number">250</span>,</div><div class="line">            y: <span class="number">250</span>,</div><div class="line">            radius: <span class="number">50</span>,</div><div class="line">            direction: <span class="string">'right'</span>,</div><div class="line">            <span class="comment">// 移动圆形</span></div><div class="line">            move: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="keyword">if</span> (<span class="keyword">this</span>.direction === <span class="string">'right'</span>) &#123;</div><div class="line">                    <span class="keyword">if</span> (<span class="keyword">this</span>.x &lt;= <span class="number">430</span>) &#123;</div><div class="line">                         <span class="keyword">this</span>.x += <span class="number">5</span>;</div><div class="line">                    &#125; <span class="keyword">else</span> &#123;</div><div class="line">                        <span class="keyword">this</span>.direction = <span class="string">'left'</span>;</div><div class="line">                    &#125;</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    <span class="keyword">if</span> (<span class="keyword">this</span>.x &gt;= <span class="number">60</span>) &#123;</div><div class="line">                         <span class="keyword">this</span>.x -= <span class="number">5</span>;</div><div class="line">                    &#125; <span class="keyword">else</span> &#123;</div><div class="line">                        <span class="keyword">this</span>.direction = <span class="string">'right'</span>;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;,</div><div class="line">            draw: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="comment">// 绘制圆形</span></div><div class="line">                context.beginPath();</div><div class="line">                <span class="comment">// 设置开始角度为0，结束角度为 2π 弧度</span></div><div class="line">                context.arc(<span class="keyword">this</span>.x, <span class="keyword">this</span>.y, <span class="keyword">this</span>.radius, <span class="number">0</span>, <span class="number">2</span> * <span class="built_in">Math</span>.PI, <span class="literal">false</span>);</div><div class="line">                context.fillStyle = <span class="string">'#00c09b'</span>;</div><div class="line">                context.fill();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">// 动画执行函数</span></div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">animate</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="comment">// 随机更新圆形位置</span></div><div class="line">            circle.move();</div><div class="line">            <span class="comment">// 清除画布</span></div><div class="line">            context.clearRect(<span class="number">0</span>, <span class="number">0</span>, canvas.width, canvas.height);</div><div class="line">            <span class="comment">// 绘画圆</span></div><div class="line">            circle.draw();</div><div class="line">            <span class="comment">// 使用requestAnimationFrame实现动画循环</span></div><div class="line">            requestAnimationFrame(animate);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">// 先画第一帧的圆，即初始化的圆</span></div><div class="line">        circle.draw();</div><div class="line">        <span class="comment">// 执行animate</span></div><div class="line">        animate();        </div><div class="line">    &lt;<span class="regexp">/script&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>body&gt;</div><div class="line">&lt;<span class="regexp">/html&gt;</span></div></pre></td></tr></table></figure>
+
+<!-- 20171118 -->
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"Dark Wing's Personal Website","bdMini":"1","bdMiniList":false,"bdPic":"Dark Wing's Personal Website","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["sqq","qzone","tsina","tqf","weixin","fbook","twi","linkedin","copy"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["sqq","qzone","tsina","tqf","weixin","fbook","twi","linkedin","copy"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!-- 20171118 -->
+
+<!-- 20171030 -->
+<!-- 实验室 -->
+<!-- <center>
+<div id="cyReward" role="cylabs" data-use="reward"></div>
+</center> -->
+<!-- 20171030 -->
+
+<!-- 20180111 熊掌号 -->
+<!-- <div style="padding-left: 17px; padding-right: 17px;">
+    <script>cambrian.render('tail')</script>
+</div> -->
+<!-- 20180111 熊掌号 -->
+
+        </div>
+      </div>
+    </div>
+    
+<!-- 20171030 -->
+<!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="梦幻动画H5单页"></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = 'cyti5JxXc'; 
+var conf = 'prod_b92a4c7254fbe603176fd52ee04c6071'; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+<!-- <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cyti5JxXc"></script> -->
+<!-- 20171030 -->
+
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <!-- 20170814 -->
+  <div class="row">
+  	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" id="statistics" style="position:absolute;top:180px;left:30px"><script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=55rwupqghxb&amp;m=7&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script><!-- <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=55rwupqghxb&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script> --></div>
+  </div>
+  <!-- 20170814 -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Copyright &copy; 2017 - 2018 Dark Wing
+          冀ICP备17006927号
+        </p>
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
