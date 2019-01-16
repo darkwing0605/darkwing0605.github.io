@@ -51,7 +51,7 @@ input::-moz-focus-inner {
 /* 去掉各Table cell 的边距并让其边重合 */
 table {
   border-collapse: collapse;
-  border-spacing: 0;
+  border-spacing: 1;
 }
 
 /* 去除默认边框 */
