@@ -190,6 +190,10 @@
   document.addEventListener("DOMContentLoaded", function(event) {
     var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
     codeBlocks.forEach(function(block, index) {
+		hljs.configure（ {
+			tabReplace： '		'， // 4个空格
+			languages: '[javascript, css, html, scss]'
+		}）
       hljs.highlightBlock(block);
     });
   });
