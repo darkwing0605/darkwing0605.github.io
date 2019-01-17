@@ -1372,8 +1372,3 @@ pre .javascript .function {
   margin-right: 5px;
   display: inline-block;
 }
-
-/* 20190117 */
-figure table {
-  display: block;
-}
