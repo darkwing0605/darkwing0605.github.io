@@ -207,7 +207,6 @@
     var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
     codeBlocks.forEach(function(block, index) {
 			hljs.configure({
-				tabReplace: '  ',
 				languages: ['javascript', 'css', 'html', 'scss'],
 			});
       hljs.highlightBlock(block);
