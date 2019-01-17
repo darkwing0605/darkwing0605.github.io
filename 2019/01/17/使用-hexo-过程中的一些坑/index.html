@@ -127,7 +127,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2019-01-17</span>
-            <span class="time">17:46:56</span>
+            <span class="time">17:56:13</span>
           </span>
           
           <!--  Categories  -->
@@ -154,7 +154,6 @@
 <h3 id="代码块和代码行数没有对齐"><a href="#代码块和代码行数没有对齐" class="headerlink" title="代码块和代码行数没有对齐"></a>代码块和代码行数没有对齐</h3><p>大概就是下面这个样子</p>
 <p><img src="../../../../img/hexo-bug/hexo-bug-1.png" alt="hexo-bug-1"></p>
 <p>个人认为这种情况是版本的原因，可能是 <code>hexo</code> 或 <code>hexo-cli</code> 的版本太低了。然鹅考虑到整体升版本的话，代价可能有点大，所以我没有贸然尝试。<br>实际上我的解决方案就是：直接去 <code>GitHub</code> 下载最新版本的 <a href="https://github.com/hexojs/hexo-util" target="_blank" rel="external"><code>hexo-util</code></a>，然后把 <code>node-modules/hexo-util/lib/highlight.js</code> 这个文件替换为最新版本。<br>目前来看生效了，并且暂时没有发现有什么太大的问题</p>
-<p>好嘛，在写这篇文章的时候复现 <code>bug</code> 截图的时候发现问题了<br>代码中的空行，即 <code>&lt;div class=&quot;line&gt;&lt;/div&gt;</code> 没有高度，导致代码块和代码行没有对齐</p>
 <h3 id="代码高亮不正确"><a href="#代码高亮不正确" class="headerlink" title="代码高亮不正确"></a>代码高亮不正确</h3><p>举个栗子，构建之后发现可能出现一个非常神奇的配色（好吧还是这张图）</p>
 <p><img src="../../../../img/hexo-bug/hexo-bug-1.png" alt="hexo-bug-1"></p>
 <p>这个问题出现的原因是 <a href="https://highlightjs.org/" target="_blank" rel="external"><code>highlight.js</code></a> 会自己检测代码类型，然后它就自动把我的 <code>JavaScript</code> 代码识别为 <code>LiveScript</code> 或者别的什么</p>
