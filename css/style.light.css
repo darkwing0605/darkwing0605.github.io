@@ -444,9 +444,6 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
   overflow: auto;
 }
 .highlight table {
-  /* 0190117 */
-  display: block;
-  /* 0190117 */
   width: 100%;
   max-width: 100%;
 }
