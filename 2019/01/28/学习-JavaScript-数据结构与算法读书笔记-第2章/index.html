@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="darkwing0605">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="a标签链接为空的写法"/>
+  <meta property="og:title" content="学习《JavaScript 数据结构与算法》读书笔记"/>
   <meta property="og:description" content="Dark Wing&amp;apos;s Personal Website" />
   <meta property="og:site_name" content="Dark Wing"/>
   <meta property="og:type" content="article" />
@@ -21,7 +21,7 @@
   
 
   <!-- Site Title -->
-  <title>Dark Wing-a标签链接为空的写法</title>
+  <title>Dark Wing-学习《JavaScript 数据结构与算法》读书笔记</title>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -69,7 +69,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">a标签链接为空的写法</p>
+          <p class="title">学习《JavaScript 数据结构与算法》读书笔记</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -126,14 +126,14 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2017-08-13</span>
+            <span class="date">2019-01-28</span>
             <span class="time">19:55:09</span>
           </span>
           
           <!--  Categories  -->
             <span class="categories info">Under 
 
-<a href="/categories/Coding/">Coding</a>
+<a href="/categories/Article/">Article</a>
 </span>
           
         </div>
@@ -142,33 +142,108 @@
           <div class="post-tags text-muted">
             Tags: 
 
-<a class="tag" href="/tags/HTML/">#HTML</a> <a class="tag" href="/tags/a标签/">#a标签</a>
+<a class="tag" href="/tags/《JavaScript-数据结构与算法》读书笔记/">#《JavaScript 数据结构与算法》读书笔记</a>
 
 
           </div>
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <p>很久之前就注意到a标签链接为空时有许多种写法<br>最近将常见的几种写法测试了一下<br><em>手机端可左右滑动查看代码</em></p>
+          <p>学习《JavaScript 数据结构与算法》读书笔记<font color="#DCDCDC">和勘误？</font></p>
 <a id="more"></a>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>包含了一个位置信息，默认的锚点是#top，但可以加上 onclick=”return false”，防止上滚到页的顶部。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"##"</span>&gt;</span>test2<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>在Chrome中不再默认跳转到页面头部，地址栏被修改。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"###"</span>&gt;</span>test3<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>在Chrome、IE11中不再默认跳转到页面头部，地址栏被修改。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"####"</span>&gt;</span>test4<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>在Chrome、IE11中不再默认跳转到页面头部，地址栏被修改。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#all"</span>&gt;</span>test5<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>不会滚动，但是如果有id为all的元素，点击这个连接后，锚点机制会作用，地址栏被修改。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:void(0);"</span>&gt;</span>test6<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>仅仅表示一个死链接，执行执行一次表达式“0”，然后返回undefined。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span>&gt;</span>test7<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>直接返回undefined。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:"</span>&gt;</span>test8<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>IE6中会使得页面中gif暂停，并且触发onbeforeunload事件，IE6认作这个页面有了重定向，并abort之后所有的请求。所以假如你在此之后替换了一个<img>的src，IE6完全不会完成这个新的请求。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:void(0)"</span>&gt;</span>test9<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>同test8</p>
+<h1 id="第2章-数组"><a href="#第2章-数组" class="headerlink" title="第2章 数组"></a>第2章 数组</h1><h2 id="2-2-创建和初始化数组"><a href="#2-2-创建和初始化数组" class="headerlink" title="2.2 创建和初始化数组"></a>2.2 创建和初始化数组</h2><h3 id="访问元素和迭代数组"><a href="#访问元素和迭代数组" class="headerlink" title="访问元素和迭代数组"></a>访问元素和迭代数组</h3><p>求斐波那契数列的前二十个数字。已知斐波那契数列中第一个数字是1，第二个是2，从第三项开始，每一项都等于前两项之和：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fibonacci = [];</span><br><span class="line">fibonacci[<span class="number">1</span>] = <span class="number">1</span>; <span class="comment">/* 这里确实是从数组第二位开始，略过了第一位 */</span></span><br><span class="line">fibonacci[<span class="number">2</span>] = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">3</span>; i &lt; <span class="number">20</span>; i++) &#123;</span><br><span class="line">	fibonacci[i] = fibonacci[i - <span class="number">1</span>] + fibonacci[i - <span class="number">2</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; fibonacci.length; i++) &#123;</span><br><span class="line">	<span class="built_in">console</span>.log(fibonacci[i])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其实斐波那契数列是 <code>1 1 2 3 ...</code> ，大概这就是为什么要略过第一位？</p>
+<h2 id="2-7-JavaScript-的数组方法参考"><a href="#2-7-JavaScript-的数组方法参考" class="headerlink" title="2.7 JavaScript 的数组方法参考"></a>2.7 JavaScript 的数组方法参考</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">方法名</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>concat</code></td>
+<td style="text-align:center">连接2个或更多数组，并返回结果</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>every</code></td>
+<td style="text-align:center">对数组中的每一项运行给定函数，如果该函数对每一项都返回<code>true</code>，则返回<code>true</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>filter</code></td>
+<td style="text-align:center">对数组中的每一项运行给定函数，返回该函数会返回<code>true</code>的项组成的数组</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>forEach</code></td>
+<td style="text-align:center">对数组中的每一项运行给定函数，这个方法没有返回值</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>join</code></td>
+<td style="text-align:center">将所有的数组元素连接成一个字符串</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>indexof</code></td>
+<td style="text-align:center">返回第一个与给定参数相等的数组元素的索引，没有找到则返回<code>-1</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>lastIndexOf</code></td>
+<td style="text-align:center">返回在数组中搜索到的与给定参数相等的元素的索引里最大的值</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>map</code></td>
+<td style="text-align:center">对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>reverse</code></td>
+<td style="text-align:center">颠倒数组中元素的顺序，原先第一个元素现在变成最后一个，同样原先的最后一个元素变成了现在的第一个</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>slice</code></td>
+<td style="text-align:center">传入索引值，将数组里对应索引范围内的元素作为新数组返回</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>some</code></td>
+<td style="text-align:center">对数组中的每一项运行给定函数，如果任一项返回<code>true</code>，则返回<code>true</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>sort</code></td>
+<td style="text-align:center">按照字母顺序对数组排序，支持传入指定排序方法的函数作为参数</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>toString</code></td>
+<td style="text-align:center">将数组作为字符串返回</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>valueOf</code></td>
+<td style="text-align:center">和<code>toString</code>类似，将数组作为字符串返回</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>push</code></td>
+<td style="text-align:center">把元素添加到数组的末尾</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>pop</code></td>
+<td style="text-align:center">删除数组里最靠后的元素</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>shift</code></td>
+<td style="text-align:center">移除数组里的第一个元素</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>unshift</code></td>
+<td style="text-align:center">把元素插入到数组的首位</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>splice</code></td>
+<td style="text-align:center">该方法接收的第一个参数，表示想要删除或插入的元素的索引值。第二个参数是删除元素的个数（不删除时传入0）。第三个元素往后，就是要添加数组里的值</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>通过 <code>push</code> 和 <code>pop</code> 方法，就能用数组来模拟栈</p>
+<p>通过 <code>shift</code> 和 <code>unshift</code> 方法，就能用数组模拟基本的队列数据结构</p>
+</blockquote>
 
 <!-- 20181125 Google Ad -->
 
@@ -209,7 +284,7 @@
     
 <!-- 20171030 -->
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="a标签链接为空的写法"></div> 
+<div id="SOHUCS" sid="学习《JavaScript 数据结构与算法》读书笔记"></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = 'cyti5JxXc'; 
