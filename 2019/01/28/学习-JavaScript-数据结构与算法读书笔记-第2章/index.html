@@ -127,7 +127,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2019-01-28</span>
-            <span class="time">20:41:53</span>
+            <span class="time">11:38:15</span>
           </span>
           
           <!--  Categories  -->
@@ -243,6 +243,22 @@
 <blockquote>
 <p>通过 <code>push</code> 和 <code>pop</code> 方法，就能用数组来模拟栈</p>
 <p>通过 <code>shift</code> 和 <code>unshift</code> 方法，就能用数组模拟基本的队列数据结构</p>
+</blockquote>
+<h3 id="2-7-2-迭代器函数"><a href="#2-7-2-迭代器函数" class="headerlink" title="2.7.2 迭代器函数"></a>2.7.2 迭代器函数</h3><p>JavaScript内置了许多数组可用的迭代方法。对于本节的离例子，我们需要数组和函数。加入有一个数组，它值是从1到15，如果数组里的元素可以被2整除（整数），函数就返回<code>true</code> ，否则返回 <code>false</code> 。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isEven = <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(x);</span><br><span class="line">	<span class="keyword">return</span> (x % <span class="number">2</span> == <span class="number">0</span>) ? <span class="literal">true</span> : <span class="literal">false</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">14</span>, <span class="number">15</span>];</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>return (x % 2 == 0) ? true : false</code> 也可以写成 <code>return (x % 2 == 0)</code></p>
+</blockquote>
+<h4 id="1-用-every-方法迭代"><a href="#1-用-every-方法迭代" class="headerlink" title="1. 用 every 方法迭代"></a>1. 用 <code>every</code> 方法迭代</h4><p><code>every</code> 方法会迭代数组中的每个元素，直到返回 <code>false</code> ：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numbers.every(isEven);</span><br></pre></td></tr></table></figure>
+<p>在这个例子里，数组 <code>numbers</code> 的第一个元素是1，它不是2的倍数，因此 <code>isEven</code> 函数返回 <code>false</code> ，然后 <code>every</code> 执行结束。</p>
+<h4 id="2-用-some-方法迭代"><a href="#2-用-some-方法迭代" class="headerlink" title="2. 用 some 方法迭代"></a>2. 用 <code>some</code> 方法迭代</h4><p>它和 <code>every</code> 的行为类似，不过 <code>some</code> 方法会迭代数组中的每个元素，直到返回 <code>true</code> ：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numbers.some(isEven);</span><br></pre></td></tr></table></figure>
+<p>在这个例子里，数组 <code>numbers</code> 中第一个偶数是2（第二个元素）。第一个被迭代的元素是1。 <code>isEven</code> 会返回 <code>false</code> 。第二个被迭代的元素是2， <code>isEven</code> 返回 <code>true</code> ，迭代结束。</p>
+<h4 id="3-用-forEach-方法迭代"><a href="#3-用-forEach-方法迭代" class="headerlink" title="3. 用 forEach 方法迭代"></a>3. 用 <code>forEach</code> 方法迭代</h4><p>如果要迭代整个数组，可以用 <code>forEach</code> 方法。它和使用for循环的结果相同：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">numbers.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log((x % <span class="number">2</span> == <span class="number">0</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这里为什么要套两层括号，难道是为了好看？</p>
 </blockquote>
 
 <!-- 20181125 Google Ad -->
