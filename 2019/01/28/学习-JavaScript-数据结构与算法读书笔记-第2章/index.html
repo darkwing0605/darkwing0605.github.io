@@ -153,8 +153,8 @@
           </span>
           
             <span class="date-time info">Updated On
-              <span class="date">2019-02-02</span>
-              <span class="time">13:28:44</span>
+              <span class="date">2019-02-17</span>
+              <span class="time">19:18:01</span>
             </span>
           
           
@@ -177,7 +177,7 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <p>学习《JavaScript 数据结构与算法》读书笔记<font color="#DCDCDC">和勘误？</font></p>
+          <p>学习《JavaScript 数据结构与算法》读书笔记</p>
 <a id="more"></a>
 <h1 id="第2章-数组"><a href="#第2章-数组" class="headerlink" title="第2章 数组"></a>第2章 数组</h1><h2 id="2-2-创建和初始化数组"><a href="#2-2-创建和初始化数组" class="headerlink" title="2.2 创建和初始化数组"></a>2.2 创建和初始化数组</h2><h3 id="访问元素和迭代数组"><a href="#访问元素和迭代数组" class="headerlink" title="访问元素和迭代数组"></a>访问元素和迭代数组</h3><p>求斐波那契数列的前二十个数字。已知斐波那契数列中第一个数字是1，第二个是2，从第三项开始，每一项都等于前两项之和：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fibonacci = [];</span><br><span class="line">fibonacci[<span class="number">1</span>] = <span class="number">1</span>; <span class="comment">/* 这里确实是从数组第二位开始，略过了第一位 */</span></span><br><span class="line">fibonacci[<span class="number">2</span>] = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">3</span>; i &lt; <span class="number">20</span>; i++) &#123;</span><br><span class="line">	fibonacci[i] = fibonacci[i - <span class="number">1</span>] + fibonacci[i - <span class="number">2</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; fibonacci.length; i++) &#123;</span><br><span class="line">	<span class="built_in">console</span>.log(fibonacci[i])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -288,6 +288,73 @@
 <blockquote>
 <p>这里为什么要套两层括号，难道是为了好看？</p>
 </blockquote>
+<h4 id="4-用-map-和-filter-方法"><a href="#4-用-map-和-filter-方法" class="headerlink" title="4. 用 map 和 filter 方法"></a>4. 用 <code>map</code> 和 <code>filter</code> 方法</h4><p>JavaScript还有两个会返回新数组的遍历方法。第一个是 <code>map</code> :</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myMap = numbers.map(isEven);</span><br></pre></td></tr></table></figure>
+<p>数组 <code>myMap</code> 里的值是：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="literal">false</span>, <span class="literal">true</span>, <span class="literal">false</span>, <span class="literal">true</span>, <span class="literal">false</span>, <span class="literal">true</span>, <span class="literal">false</span>, <span class="literal">true</span>, <span class="literal">false</span>, <span class="literal">true</span>, <span class="literal">false</span>, <span class="literal">true</span>, <span class="literal">false</span>, <span class="literal">true</span>, <span class="literal">false</span>]</span><br></pre></td></tr></table></figure>
+<p>它保存了 <code>map</code> 方法的 <code>isEven</code> 函数的运行结果</p>
+<p>还有一个是 <code>filter</code> 方法。它返回的新数组由使函数返回 <code>true</code> 的元素组成</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> evenNumbers = numbers.fliter(isEven);</span><br></pre></td></tr></table></figure>
+<p>在这个例子里，<code>evenNumbers</code> 数组中的元素都是偶数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>, <span class="number">12</span>, <span class="number">14</span>]</span><br></pre></td></tr></table></figure>
+<h4 id="5-使用-reduce-方法"><a href="#5-使用-reduce-方法" class="headerlink" title="5. 使用 reduce 方法"></a>5. 使用 <code>reduce</code> 方法</h4><p>最后是 <code>reduce</code> 方法。 <code>reduce</code> 方法接收一个函数作为参数，这个函数有四个参数： <code>previousValue</code> 、 <code>currentValue</code> 、 <code>index</code> 、 <code>array</code> 。这个函数会返回一个将被叠加到累加器的值， <code>reduce</code> 方法停止执行后会返回这个累加值。如果要对一个数组中的所有元素求和，这就很有用：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">numbers.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">previous, current, index</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> previous + current;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>输出将会是120。</p>
+<h3 id="2-7-3-ECMAScript-6-和数组的新功能"><a href="#2-7-3-ECMAScript-6-和数组的新功能" class="headerlink" title="2.7.3 ECMAScript 6 和数组的新功能"></a>2.7.3 ECMAScript 6 和数组的新功能</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">方法名</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>@@iterator</code></td>
+<td style="text-align:center">返回一个包含数组键值对的迭代器对象，可以同步调用数组元素的键值对</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>copyWithin</code></td>
+<td style="text-align:center">复制数组中一系列元素到同一数组指定的起始位置</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>entries</code></td>
+<td style="text-align:center">返回包含数组所有键值对的<code>@@iterator</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>includes</code></td>
+<td style="text-align:center">如果数组中存在某个元素则返回 <code>true</code> ，否则返回 <code>false</code> 。 ES7新增</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>find</code></td>
+<td style="text-align:center">根据回调函数给定的条件从数组中查找元素，如果找到则返回该元素</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>findIndex</code></td>
+<td style="text-align:center">根据回调函数给定的条件从数组中查找元素，如果找到则返回该元素在数组中的索引</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>fill</code></td>
+<td style="text-align:center">用静态值填充数组</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>from</code></td>
+<td style="text-align:center">根据已有数组创建一个新数组</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>keys</code></td>
+<td style="text-align:center">返回包含数组所有索引的<code>@@iterator</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>of</code></td>
+<td style="text-align:center">根据传入的参创建一个新数组</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>values</code></td>
+<td style="text-align:center">返回包含数组中所有值的<code>@@iterator</code></td>
+</tr>
+</tbody>
+</table>
+<p>除了这些新的方法，还有一种用 <code>for...of</code> 循环来迭代数组的新做法，以及可以从数组实例得到的迭代器对象。</p>
 
 <!-- 20181125 Google Ad -->
 
