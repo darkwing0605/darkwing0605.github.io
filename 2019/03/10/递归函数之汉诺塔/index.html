@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="darkwing0605">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="OnlineAuction-by-Angular4"/>
+  <meta property="og:title" content="递归函数之汉诺塔"/>
   <meta property="og:description" content="Dark Wing&amp;apos;s Personal Website" />
   <meta property="og:site_name" content="Dark Wing"/>
   <meta property="og:type" content="article" />
@@ -21,7 +21,7 @@
   
 
   <!-- Site Title -->
-  <title>Dark Wing-OnlineAuction-by-Angular4</title>
+  <title>Dark Wing-递归函数之汉诺塔</title>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -91,7 +91,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">OnlineAuction-by-Angular4</p>
+          <p class="title">递归函数之汉诺塔</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -148,21 +148,20 @@
           
           <!-- Date -->
           <span class="date-time info">Created On
-            <span class="date">2017-12-16</span>
-            <span class="time">10:02:18</span>
+            <span class="date">2019-03-10</span>
+            <span class="time">18:01:51</span>
           </span>
           
-              <span class="date-time info">Updated On
-              <span class="date">2017-12-16</span>
-              <span class="time">10:02:18</span>
+            <span class="date-time info">Updated On
+              <span class="date">2019-03-10</span>
+              <span class="time">18:01:51</span>
             </span>
-            
           
           
           <!--  Categories  -->
             <span class="categories info">Under 
 
-<a href="/categories/Project/">Project</a>
+<a href="/categories/Article/">Article</a>
 </span>
           
         </div>
@@ -171,98 +170,42 @@
           <div class="post-tags text-muted">
             Tags: 
 
-<a class="tag" href="/tags/Angular/">#Angular</a> <a class="tag" href="/tags/Bootstrap/">#Bootstrap</a> <a class="tag" href="/tags/TypeScript/">#TypeScript</a> <a class="tag" href="/tags/Express/">#Express</a> <a class="tag" href="/tags/Node-js/">#Node.js</a>
+<a class="tag" href="/tags/Article/">#Article</a> <a class="tag" href="/tags/Algorithm/">#Algorithm</a> <a class="tag" href="/tags/Python/">#Python</a>
 
 
           </div>
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <p>基于 Angular 4 的在线竞拍应用</p>
+          <p>这周简单看看了 <code>Python</code> 的教程，忽然看到了这个汉诺塔，感觉很有意思，记下来</p>
 <a id="more"></a>
-<h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h2><p><a href="https://github.com/darkwing0605/OnlineAuction-by-Angular4" target="_blank" rel="external">GitHub</a></p>
-<p><a href="https://gitee.com/darkwing/OnlineAuction-by-Angular4" target="_blank" rel="external">码云</a></p>
-<h3 id="服务器端"><a href="#服务器端" class="headerlink" title="服务器端"></a>服务器端</h3><p><em>服务器端代码已包含构建好的客户端，可直接运行</em></p>
-<h4 id="使用简介"><a href="#使用简介" class="headerlink" title="使用简介"></a>使用简介</h4><ul>
-<li><p>1 将项目 clone 到本地</p>
-</li>
-<li><p>2 使用 npm 安装依赖包</p>
-</li>
-<li><p>3 运行 nodemon build/auction_server 启动服务器以及客户端，项目运行地址为 127.0.0.1:4201</p>
-</li>
-<li><p>4 如果服务器代码有更新，请编译后运行。手动编译运行命令 tsc ，自动编译请在个人 IDE 中自行设置</p>
-</li>
-</ul>
-<h4 id="目录简介"><a href="#目录简介" class="headerlink" title="目录简介"></a>目录简介</h4><ul>
-<li><p>build 编译后的服务器文件（不用看 hello_server.js ，那个是我随便写的，懒得删了）</p>
-</li>
-<li><p>client 已经构建好的客户端（生产模式），如果需要看源码，请到 auction 分支</p>
-</li>
-<li><p>server 未编译的服务器文件（同样也不用看 hello_server.ts ）</p>
-</li>
-</ul>
-<h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><h4 id="使用简介-1"><a href="#使用简介-1" class="headerlink" title="使用简介"></a>使用简介</h4><ul>
-<li><p>1 将项目 clone 到本地</p>
-</li>
-<li><p>2 使用 npm 安装依赖包</p>
-</li>
-<li><p>3 启动客户端，项目运行地址为 127.0.0.1:4200</p>
-<ul>
-<li><p>3.1 运行 npm run start 启动开发模式</p>
-</li>
-<li><p>3.2 运行 npm run startProd 启动生产模式</p>
-</li>
-</ul>
-</li>
-<li><p>4 代码热更新</p>
-</li>
-<li><p>5 构建</p>
-<ul>
-<li><p>5.1 运行 ng build 构建开发模式</p>
-</li>
-<li><p>5.2 运行 ng build –env=prod 构建生产模式</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="目录简介-1"><a href="#目录简介-1" class="headerlink" title="目录简介"></a>目录简介</h4><ul>
-<li><p>(build) 如果构建项目将会出现在这个文件夹中</p>
-</li>
-<li><p>e2e 端对端测试，本项目中没有使用</p>
-</li>
-<li><p>src 项目源码位置</p>
-<ul>
-<li><p>app 就是这里了</p>
-<ul>
-<li><p>carousel 轮播图组件</p>
-</li>
-<li><p>footer 底部组件</p>
-</li>
-<li><p>home 主页组件</p>
-</li>
-<li><p>navbar 导航组件</p>
-</li>
-<li><p>pipe 管道</p>
-</li>
-<li><p>product-detail 商品详情组件（包括评价以及关注组件）</p>
-</li>
-<li><p>product 商品组件</p>
-</li>
-<li><p>search 搜索组件</p>
-</li>
-<li><p>shared product 服务以及 webSocket 服务</p>
-</li>
-<li><p>stars 星级评价组件</p>
-</li>
-</ul>
-</li>
-<li><p>assets 静态资源目录，然而本项目图片都是在线的</p>
-</li>
-<li><p>environments 环境配置</p>
-</li>
-</ul>
-</li>
-</ul>
+<h2 id="汉诺塔"><a href="#汉诺塔" class="headerlink" title="汉诺塔"></a>汉诺塔</h2><p>首先科普一下这个小游戏</p>
+<blockquote>
+<p>印度传说中，大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从下往上按照大小顺序摞着64片黄金圆盘。大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。并且规定，在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。</p>
+<p>据说。。当完成这个任务时，世界就将在一声霹雳中消灭，而梵塔、庙宇和众生也都将同归于尽</p>
+</blockquote>
+<p><em>摘自百度百科</em></p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>首先我们给这三根柱子进行编号 <code>A, B, C</code> ，所处的位置就是 <code>a, b, c</code> 。现在我们用递归的思维来看这个问题：</p>
+<p>如果a柱有n个圆盘，那么就可以看作a有1个底盘和(n - 1)个圆盘，那么这个问题的解决方案就是：</p>
+<blockquote>
+<p>(n - 1)圆盘 A –&gt; B</p>
+<p>1底盘 A –&gt; C</p>
+<p>(n - 1)圆盘 B –&gt; C</p>
+</blockquote>
+<p>问题解决~</p>
+<p>因为我们整体输出的结果都是 <code>a --&gt; c</code> ，因此在执行第一步和第三步的时候，需要把调用三根柱子的参数改变一下，才能保持最后输出的结果是正确的</p>
+<p>最后给出代码（这里以 <code>n = 4</code> 举例）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hanoi</span><span class="params">(n, a, b, c)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">print</span> a, <span class="string">'--&gt;'</span>, c</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    hanoi(n - <span class="number">1</span>, a, c, b)</span><br><span class="line">    <span class="keyword">print</span> a, <span class="string">'--&gt;'</span>, c</span><br><span class="line">    hanoi(n - <span class="number">1</span>, b, a, c)</span><br><span class="line"></span><br><span class="line">hanoi(<span class="number">4</span>, <span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>)</span><br></pre></td></tr></table></figure>
+<p>输出结果为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">A --&gt; B</span><br><span class="line">A --&gt; C</span><br><span class="line">B --&gt; C</span><br><span class="line">A --&gt; B</span><br><span class="line">C --&gt; A</span><br><span class="line">C --&gt; B</span><br><span class="line">A --&gt; B</span><br><span class="line">A --&gt; C</span><br><span class="line">B --&gt; C</span><br><span class="line">B --&gt; A</span><br><span class="line">C --&gt; A</span><br><span class="line">B --&gt; C</span><br><span class="line">A --&gt; B</span><br><span class="line">A --&gt; C</span><br><span class="line">B --&gt; C</span><br></pre></td></tr></table></figure>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>使用递归算出来移动次数应该是 <code>f(n) = 2^n - 1</code> ，当 <code>n = 64</code> 时……算了，世界毁灭就毁灭了吧……</p>
+<p>另外，在实际操作中，有一位美国学者发现了一种出人意料的解决方案：</p>
+<blockquote>
+<p>首先将三根柱子按顺时针顺序排成品字型，把所有的圆盘按大小顺序放在A柱上，再根据圆盘的数量确定柱子的排放顺序：当n为偶数时，按顺时针方向依次摆放 <code>A, B, C</code>；当n为偶数，按顺时针方向依次摆放 <code>A, C, B</code> 。</p>
+<p>按顺时针方向把圆盘1从现在的柱子移动到下一根柱子</p>
+<p>接着，把另外两根柱子上可以移动的圆盘移动到新的柱子上</p>
+<p>反复进行操作，最终可以完成汉诺塔的移动</p>
+</blockquote>
 
 <!-- 20181125 Google Ad -->
 
@@ -303,7 +246,7 @@
     
 <!-- 20171030 -->
 <!--PC和WAP自适应版-->
-<!-- <div id="SOHUCS" sid="OnlineAuction-by-Angular4"></div> 
+<!-- <div id="SOHUCS" sid="递归函数之汉诺塔"></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = 'cyti5JxXc'; 
