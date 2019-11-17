@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="darkwing0605">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="学习《JavaScript 数据结构与算法》读书笔记-第7章"/>
+  <meta property="og:description" content="Dark Wing&amp;apos;s Personal Website" />
+  <meta property="og:site_name" content="Dark Wing"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://www.dark-wing.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Dark Wing" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Dark Wing-学习《JavaScript 数据结构与算法》读书笔记-第7章</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+    <!-- <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-114678369-1', 'auto');
+        ga('send', 'pageview');
+    </script> -->
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-114678369-1'></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-114678369-1');
+		</script>
+
+
+  
+  <!-- 20170930 Google Console-->
+  <!-- 自动广告 -->
+  <!--
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-7996247261670961",
+      enable_page_level_ads: true
+    });
+  </script>
+
+  <meta name="google-site-verification" content="oD5ewjXVO5xIeD-HOx5LlcHxqeWfTgEO2IS491uxZ8c" />
+  -->
+  <!-- 20170930 -->
+  <!-- 20171007 百度统计-->
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9951afff4e34f23d370bf6958eaab534";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  <!-- 20171007 -->
+  <!-- 20180111 熊掌号 -->
+  <!-- <script src="//msite.baidu.com/sdk/c.js?appid=1589014467202518"></script> -->
+  <!-- 20180111 熊掌号 -->
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">学习《JavaScript 数据结构与算法》读书笔记-第7章</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/darkwing0605">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:darkwing@dark-wing.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By darkwing0605</span>
+          
+          <!-- Date -->
+          <span class="date-time info">Created On
+            <span class="date">2019-11-17</span>
+            <span class="time">15:43:50</span>
+          </span>
+          
+            <span class="date-time info">Updated On
+              <span class="date">2019-11-17</span>
+              <span class="time">15:43:50</span>
+            </span>
+          
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/Article/">Article</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/《JavaScript-数据结构与算法》读书笔记/">#《JavaScript 数据结构与算法》读书笔记</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>学习《JavaScript 数据结构与算法》读书笔记</p>
+<a id="more"></a>
+<h1 id="7-字典和散列表"><a href="#7-字典和散列表" class="headerlink" title="7 字典和散列表"></a>7 字典和散列表</h1><h2 id="7-1-字典"><a href="#7-1-字典" class="headerlink" title="7.1 字典"></a>7.1 字典</h2><p>在字典中，存储的是 <code>[键, 键]</code> 对，其中键名是用来查询特定严肃的。字典和集合很相似，集合以 <code>[值, 值]</code> 的形式存储元素，字典则是以 <code>[键, 键]</code> 的形式来存储元素。字典也被称作 <strong>映射</strong> 。</p>
+<h3 id="7-1-1-创建字典"><a href="#7-1-1-创建字典" class="headerlink" title="7.1.1 创建字典"></a>7.1.1 创建字典</h3><p>与 <code>Set</code> 类相似，ECMAScript 6 同样包含了一个 <code>Map</code> 类的实现，即我们所说的字典。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Dictionary</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> items = &#123;&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="1-has-和-set-方法"><a href="#1-has-和-set-方法" class="headerlink" title="1. has 和 set 方法"></a>1. has 和 set 方法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.has = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> items.hasOwnProperty(key);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.set = <span class="function"><span class="keyword">function</span>(<span class="params">key, value</span>) </span>&#123;</span><br><span class="line">	items[key] = value;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="2-delete-方法"><a href="#2-delete-方法" class="headerlink" title="2. delete 方法"></a>2. delete 方法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.delete = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="keyword">this</span>.has(key)) &#123;</span><br><span class="line">		<span class="keyword">delete</span> items[key];</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>然后我们可以使用 JavaScript 的 <code>remove</code> 操作符来从 <code>items</code> 对象中移除 <code>key</code> 属性。</p>
+<h4 id="3-get-和-values-方法"><a href="#3-get-和-values-方法" class="headerlink" title="3. get 和 values 方法"></a>3. get 和 values 方法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.get = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>.has(key) ? items[key] : <span class="literal">undefined</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.values = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> values = [];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> items) &#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">this</span>.has(k)) &#123;</span><br><span class="line">			values.push(items[k]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> values;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="4-clear-、-size-、-keys-和-getItems-方法"><a href="#4-clear-、-size-、-keys-和-getItems-方法" class="headerlink" title="4. clear 、 size 、 keys 和 getItems 方法"></a>4. clear 、 size 、 keys 和 getItems 方法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.clear = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	items = &#123;&#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.size = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Object</span>.keys(items).length;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.sizeLegacy = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">in</span> items) &#123;</span><br><span class="line">		<span class="keyword">if</span> (items.hasOwnProperty(key)) &#123;</span><br><span class="line">			++count;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> count;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.keys = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Object</span>.keys(items);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.getItems = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> items;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="7-1-2-使用-Dictionary-类"><a href="#7-1-2-使用-Dictionary-类" class="headerlink" title="7.1.2 使用 Dictionary 类"></a>7.1.2 使用 Dictionary 类</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> dictionary = <span class="keyword">new</span> Dictionary();</span><br><span class="line">dictionary.set(<span class="string">'Gandalf'</span>, <span class="string">'gandalf@email.com'</span>);</span><br><span class="line">dictionary.set(<span class="string">'John'</span>, <span class="string">'johnsnow@email.com'</span>);</span><br><span class="line">dictionary.set(<span class="string">'Tyrion'</span>, <span class="string">'tyrion@email.com'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(dictionary.has(<span class="string">'Gandalf'</span>)); <span class="comment">/* true */</span></span><br><span class="line"><span class="built_in">console</span>.log(dictionary.size()); <span class="comment">/* 3 */</span></span><br><span class="line"><span class="built_in">console</span>.log(dictionary.keys()); <span class="comment">/* ["Gandalf", "John", "Tyrion"] */</span></span><br><span class="line"><span class="built_in">console</span>.log(dictionary.values()); <span class="comment">/* ["gandalf@email.com", "johnsnow@email.com", "tyrion@emall.com"] */</span></span><br><span class="line"><span class="built_in">console</span>.log(dictionary.get(<span class="string">'Tyrion'</span>)); <span class="comment">/* tyrion@emall.com */</span></span><br><span class="line"></span><br><span class="line">dictionary.delete(<span class="string">'John'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(dictionary.keys()); <span class="comment">/* ["Gandalf", "Tyrion"] */</span></span><br><span class="line"><span class="built_in">console</span>.log(dictionary.values()); <span class="comment">/* ["gandalf@email.com", "tyrion@emall.com"] */</span></span><br><span class="line"><span class="built_in">console</span>.log(dicitonary.getItems()); <span class="comment">/* Object &#123;Gandalf: "gandalf@emall.com", Tyrion: "tyrion@emall.com"&#125; */</span></span><br></pre></td></tr></table></figure>
+<h2 id="7-2-散列表"><a href="#7-2-散列表" class="headerlink" title="7.2 散列表"></a>7.2 散列表</h2><p><code>HashTable</code> 类，也叫 <code>HashMap</code> 类，它是 <code>Dictionary</code> 类的一种散列表实现方式。<br><strong>散列算法</strong> 的作用是尽可能快地在数据结构中找到一个值。在之前的章节中，已经知道如果要在数据结构中获得一个值（get），需要遍历整个数据结构来找到它。如果使用散列函数，就知道值的具体位置，因此能够快速检索到该值。散列函数的作用是给定一个键值，然后返回值在表中的地址。</p>
+<p>举个栗子，我们使用电子邮件地址簿。我们将要使用最常见的散列函数 <code>lose lose</code> 散列函数，方法时简单地将每个键值中的每个字母的ASCII值相加</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称/键</th>
+<th style="text-align:center">散列函数</th>
+<th style="text-align:center">散列值</th>
+<th style="text-align:center">散列表</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Gandalf</td>
+<td style="text-align:center">71+97+110+100+97+108+102</td>
+<td style="text-align:center">685</td>
+<td style="text-align:center">[685] <code>gandalf@email.com</code></td>
+</tr>
+<tr>
+<td style="text-align:center">John</td>
+<td style="text-align:center">74+111+104+110</td>
+<td style="text-align:center">399</td>
+<td style="text-align:center">[399] <code>johnsnow@email.com</code></td>
+</tr>
+<tr>
+<td style="text-align:center">Tyrion</td>
+<td style="text-align:center">84+121+114+105+111+110</td>
+<td style="text-align:center">645</td>
+<td style="text-align:center">[645] <code>tyrion@email.com</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="7-2-1-创建散列表"><a href="#7-2-1-创建散列表" class="headerlink" title="7.2.1 创建散列表"></a>7.2.1 创建散列表</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">HashTable</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> table = [];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> loseloseHashCode = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> hash = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; key.length; i++) &#123;</span><br><span class="line">		hash += key.charCodeAt(i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> hash % <span class="number">37</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.put = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> table[loseloseHashCode(key)];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.remove = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">	table[loseloseHashCode(key)] = <span class="literal">undefined</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="7-2-2-使用-HashTable-类"><a href="#7-2-2-使用-HashTable-类" class="headerlink" title="7.2.2 使用 HashTable 类"></a>7.2.2 使用 HashTable 类</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> hash = <span class="keyword">new</span> HashTable();</span><br><span class="line">hash.put(<span class="string">'Gandalf'</span>, <span class="string">'gandalf@email.com'</span>); <span class="comment">/* 19 - Gandalf */</span></span><br><span class="line">hash.put(<span class="string">'John'</span>, <span class="string">'johnsnow@email.com'</span>); <span class="comment">/* 29 - John */</span></span><br><span class="line">hash.put(<span class="string">'Tyrion'</span>, <span class="string">'tyrion@email.com'</span>); <span class="comment">/* 16 - Tyrion */</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(hash.get(<span class="string">'Gandalf'</span>)); <span class="comment">/* gandalf@email.com */</span></span><br><span class="line"><span class="built_in">console</span>.log(hash.get(<span class="string">'Loiane'</span>)); <span class="comment">/* undefined */</span></span><br><span class="line"></span><br><span class="line">hash.remove(<span class="string">'Gandalf'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(hash.get(<span class="string">'Gandalf'</span>)); <span class="comment">/* undefined */</span></span><br></pre></td></tr></table></figure>
+<h3 id="7-2-4-处理散列表中的冲突"><a href="#7-2-4-处理散列表中的冲突" class="headerlink" title="7.2.4 处理散列表中的冲突"></a>7.2.4 处理散列表中的冲突</h3><p>有时候，一些键会有相同的散列值。不同的值在散列表中对应相同位置的时候，我们称其为冲突。<br>同一散列值，最后一个被添加的，会将与之冲突的元素覆盖。<br>使用一个数据结构来保存数据的目的显然不是去丢失这些数据，而是通过某种方法将它们全部保存起来。处理冲突有几种方法：分离链接、线性探查、双散列法</p>
+<h4 id="1-分离链接"><a href="#1-分离链接" class="headerlink" title="1. 分离链接"></a>1. 分离链接</h4><p>分离链接法包括为散列表的每一个位置创建一个链表并将元素存储在里面。它是解决冲突的最简单的方法，但是它在 <code>HashTable</code> 实例之外还需要额外的存储空间。<br>即在冲突的散列值位置，添加所有元素的 <code>LinkedList</code> 实例。</p>
+<p>对于分离链接和线性探查来说，只需要重写 <code>put</code> 、 <code>get</code> 、 <code>remove</code> 。<br>为了实现一个使用分离链接的 <code>HashTable</code> 实例，我们需要一个新的辅助类来表示将要加入的 <code>LinkedList</code> 实例的元素。我们管它加 <code>ValuePair</code> 类。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ValuePair = <span class="function"><span class="keyword">function</span>(<span class="params">key, value</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.key = key;</span><br><span class="line">	<span class="keyword">this</span>.value = value;</span><br><span class="line">	<span class="keyword">this</span>.toString = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">'['</span> + <span class="keyword">this</span>.key + <span class="string">' - '</span> + <span class="keyword">this</span>.value + <span class="string">']'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.put = <span class="function"><span class="keyword">function</span>(<span class="params">key, value</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> position = loseloseHashCode(key);</span><br><span class="line">	<span class="keyword">if</span> (table[position] === <span class="literal">undefined</span>) &#123;</span><br><span class="line">		table[position] = <span class="keyword">new</span> LinkedList();</span><br><span class="line">	&#125;</span><br><span class="line">	table[position].append(<span class="keyword">new</span> ValuePair(key, value));</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.get = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> position = loseloseHashCode(key);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (table[position] !== <span class="literal">undefined</span>) &#123;</span><br><span class="line">		<span class="keyword">var</span> current = table[position].getHead();</span><br><span class="line"></span><br><span class="line">		<span class="keyword">while</span>(current.next) &#123;</span><br><span class="line">			<span class="keyword">if</span> (current.element.key === key) &#123;</span><br><span class="line">				<span class="keyword">return</span> current.element.value;</span><br><span class="line">			&#125;</span><br><span class="line">			current = current.next;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (current.element.key === key) &#123;</span><br><span class="line">			<span class="keyword">return</span> current.element.value;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">undefined</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.remove = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> position = loseloseHashCode(key);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (table[position] !== <span class="literal">undefined</span>) &#123;</span><br><span class="line">		<span class="keyword">var</span> current = table[position].getHead();</span><br><span class="line">		<span class="keyword">while</span> (current.next) &#123;</span><br><span class="line">			<span class="keyword">if</span> (current.element.key === key) &#123;</span><br><span class="line">				table[position].remove(current.element);</span><br><span class="line">				<span class="keyword">if</span> (table[position].isEmpty()) &#123;</span><br><span class="line">					table[position] = <span class="literal">undefined</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			current = current.next;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (current.element.key === key) &#123;</span><br><span class="line">			table[position].remove(current.element);</span><br><span class="line">			<span class="keyword">if</span> (table[position].isEmpty()) &#123;</span><br><span class="line">				table[position] = <span class="literal">undefined</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="2-线性探查"><a href="#2-线性探查" class="headerlink" title="2.线性探查"></a>2.线性探查</h4><p>当想向表中某个位置加入一个新元素的时候，如果索引为 index 的位置已经被占据了，就尝试 index+1 的位置。如果 index+1 的位置也被占据了，就尝试 index+2 的位置，以此类推</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.put = <span class="function"><span class="keyword">function</span>(<span class="params">key, value</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> position = loseloseHashCode(key);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (table[position] === <span class="literal">undefined</span>) &#123;</span><br><span class="line">		table[position] = <span class="keyword">new</span> ValuePair(key, value);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">var</span> index = ++position;</span><br><span class="line">		<span class="keyword">while</span> (table[inedx] !== <span class="literal">undefined</span>) &#123;</span><br><span class="line">			index++;</span><br><span class="line">		&#125;</span><br><span class="line">		table[index] = <span class="keyword">new</span> ValuePair(key, value);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.get = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> position = loseloseHashCode(key);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (table[position] !== <span class="literal">undefined</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (table[position].key === key) &#123;</span><br><span class="line">			<span class="keyword">return</span> table[position].value;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">var</span> index = ++position;</span><br><span class="line">			<span class="keyword">while</span> (table[index] === <span class="literal">undefined</span> || table[index].key !== key) &#123;</span><br><span class="line">				index++;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (table[index].key === key) &#123;</span><br><span class="line">				<span class="keyword">return</span> table[index].value;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">undefined</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>remove 方法和 get 方法基本相同，只需要把 <code>return table[index].value;</code> 替换为 <code>table[index] = undefined;</code></p>
+<h3 id="7-2-5-创建更好的散列函数"><a href="#7-2-5-创建更好的散列函数" class="headerlink" title="7.2.5 创建更好的散列函数"></a>7.2.5 创建更好的散列函数</h3><p>一个表现良好的散列函数由几个方面构成：插入和检索元素的时间（即性能），当然也包括较低的冲突可能性。<br>另一个可以实现的比 <code>lose lose</code> 更好的散列函数是 <code>djb2</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> djb2HashCode = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">	<span class="comment">/* 初始化一个hash变量为一个质数（大多是实现都使用5381） */</span></span><br><span class="line">	<span class="keyword">var</span> hash = <span class="number">5381</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; key.length; i++) &#123;</span><br><span class="line">		<span class="comment">/* 迭代参数key，将之与33相乘（用来当做一个魔力数） */</span></span><br><span class="line">		<span class="comment">/* 并和当前迭代到的字符的ASCII码值相加 */</span></span><br><span class="line">		hash = hash * <span class="number">33</span> + key.charCodeAt(i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/* 最后，我们将相加的和与另一个随机质数相除的余数 */</span></span><br><span class="line">	<span class="comment">/* 随机质数比我们认为的散列表的大小要大，本例中，我们认为散列表的大小为1000 */</span></span><br><span class="line">	<span class="keyword">return</span> hash % <span class="number">1013</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>这并不是最好的散列函数，但这是最受社区推崇的散列函数之一。</p>
+<h2 id="7-3-ES6-Map类"><a href="#7-3-ES6-Map类" class="headerlink" title="7.3 ES6 Map类"></a>7.3 ES6 Map类</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line"></span><br><span class="line">map.set(<span class="string">'Gandalf'</span>, <span class="string">'gandalf@email.com'</span>);</span><br><span class="line">map.set(<span class="string">'John'</span>, <span class="string">'johnsnow@email.com'</span>);</span><br><span class="line">map.set(<span class="string">'Tyrion'</span>, <span class="string">'tyrion@email.com'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(map.has(<span class="string">'Gandalf'</span>)) <span class="comment">/* true */</span></span><br><span class="line"><span class="built_in">console</span>.log(map.size) <span class="comment">/* 3 */</span></span><br><span class="line"><span class="built_in">console</span>.log(map.keys()) <span class="comment">/* ["Gandalf", "John", "Tyrion"] */</span></span><br><span class="line"><span class="built_in">console</span>.log(map.values()) <span class="comment">/* ["gandalf@email.com", "johnsnow@email.com", "tyrion@email.com"] */</span></span><br><span class="line"><span class="built_in">console</span>.log(map.get(<span class="string">'Tyrion'</span>)) <span class="comment">/* tyrion@email.com */</span></span><br></pre></td></tr></table></figure>
+<p>ES6 的 <code>Map</code> 类的 <code>values</code> 方法和 <code>keys</code> 方法都返回 <code>Iterator</code> ，而不是值或键构成的数组。<br>删除 map 中的元素可以用 <code>delete</code> 方法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">map.delete(<span class="string">'John'</span>);</span><br></pre></td></tr></table></figure></p>
+<p><code>clear</code> 方法会重置 map 数据结构。</p>
+<h2 id="7-4-WeakMap-类和-WeakSet-类"><a href="#7-4-WeakMap-类和-WeakSet-类" class="headerlink" title="7.4 WeakMap 类和 WeakSet 类"></a>7.4 WeakMap 类和 WeakSet 类</h2><p>除了 <code>Set</code> 和 <code>Map</code> 这两种新的数据结构，ES6还增加了它们的弱化版本 <code>WeakSet</code> 和 <code>WeakMap</code></p>
+<blockquote>
+<p><code>WeakSet</code> 或 <code>WeakMap</code> 类没有 <code>entries</code> 、 <code>keys</code> 和 <code>values</code> 方法</p>
+<p>只能用对象作为键</p>
+</blockquote>
+<p>创建和使用这两个类主要是为了性能。 <code>WeakSet</code> 和 <code>WeakMap</code> 是弱化的（用对象作为键），没有强引用的键。这使得 JavaScript 的垃圾回收期可以从中清除整个入口。</p>
+<p>另一个优点是，必须用键才可以去取出值。这些类没有 <code>entries</code> 、 <code>keys</code> 和 <code>values</code> 等迭代器方法，因此，除非知道键，否则没有办法取出值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> map = <span class="keyword">new</span> <span class="built_in">WeakMap</span>();</span><br><span class="line"><span class="keyword">var</span> ob1 = &#123;<span class="attr">name</span>: <span class="string">'Gandalf'</span>&#125;,</span><br><span class="line">	ob2 = &#123;<span class="attr">name</span>: <span class="string">'John'</span>&#125;,</span><br><span class="line">	ob3 = &#123;<span class="attr">name</span>: <span class="string">'Tyrion'</span>&#125;;</span><br><span class="line"></span><br><span class="line">map.set(ob1, <span class="string">'gandalf@email.com'</span>);</span><br><span class="line">map.set(ob2, <span class="string">'johnsnow@email.com'</span>);</span><br><span class="line">map.set(ob3, <span class="string">'tyrion@email.com'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(map.has(ob1)); <span class="comment">/* true */</span></span><br><span class="line"><span class="built_in">console</span>.log(map.get(ob3)); <span class="comment">/* tyrion@email.com */</span></span><br><span class="line">map.delete(ob2); <span class="comment">/* true */</span></span><br></pre></td></tr></table></figure>
+<p>同样的逻辑也适用于 <code>WeakSet</code> 类。</p>
+
+<!-- 20181125 Google Ad -->
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+  style="display:block; text-align:center;"
+  data-ad-layout="in-article"
+  data-ad-format="fluid"
+  data-ad-client="ca-pub-7996247261670961"
+  data-ad-slot="9091093676"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!-- 20181125 Google Ad -->
+
+<!-- 20171118 -->
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"Dark Wing's Personal Website","bdMini":"1","bdMiniList":false,"bdPic":"Dark Wing's Personal Website","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["sqq","qzone","tsina","tqf","weixin","fbook","twi","linkedin","copy"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["sqq","qzone","tsina","tqf","weixin","fbook","twi","linkedin","copy"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!-- 20171118 -->
+
+<!-- 20171030 -->
+<!-- 实验室 -->
+<!-- <center>
+<div id="cyReward" role="cylabs" data-use="reward"></div>
+</center> -->
+<!-- 20171030 -->
+
+<!-- 20180111 熊掌号 -->
+<!-- <div style="padding-left: 17px; padding-right: 17px;">
+    <script>cambrian.render('tail')</script>
+</div> -->
+<!-- 20180111 熊掌号 -->
+
+        </div>
+      </div>
+    </div>
+    
+<!-- 20171030 -->
+<!--PC和WAP自适应版-->
+<!-- <div id="SOHUCS" sid="学习《JavaScript 数据结构与算法》读书笔记-第7章"></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = 'cyti5JxXc'; 
+var conf = 'prod_b92a4c7254fbe603176fd52ee04c6071'; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script> -->
+<!-- <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cyti5JxXc"></script> -->
+<!-- 20171030 -->
+
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <!-- 20170814 -->
+  <div class="row">
+  	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" id="statistics" style="position:absolute;top:180px;left:30px"><script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=55rwupqghxb&amp;m=7&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script><!-- <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=55rwupqghxb&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script> --></div>
+  </div>
+  <!-- 20170814 -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Copyright &copy; 2017 - 2019 Dark Wing
+          <a target="_blank" href="https://www.beian.miit.gov.cn">冀ICP备17006927号</a>
+        </p>
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+			hljs.configure({
+				languages: ['javascript', 'css', 'html', 'scss', 'python'],
+			});
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
