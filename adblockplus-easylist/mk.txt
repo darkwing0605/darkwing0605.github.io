@@ -1,1 +1,11 @@
+[Adblock Plus 3.1]
+! Checksum: H9gMSHG2WU7sTtg78aicXh
+! Version: 202001072000
+! Title: mk
+! Last modified: 2020年1月7日19:59:44
+! Expires: 1 hours (update frequency)
+! Homepage: https://www.dark-wing.com
+!
+! ***  ***
+! MISC
 zymk.cn###layui-m-layer0
