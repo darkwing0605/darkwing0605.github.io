@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="darkwing0605">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="学习《JavaScript 数据结构与算法》读书笔记-第8章"/>
+  <meta property="og:description" content="Dark Wing&amp;apos;s Personal Website" />
+  <meta property="og:site_name" content="Dark Wing"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://www.dark-wing.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Dark Wing" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Dark Wing-学习《JavaScript 数据结构与算法》读书笔记-第8章</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+    <!-- <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-114678369-1', 'auto');
+        ga('send', 'pageview');
+    </script> -->
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-114678369-1'></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-114678369-1');
+		</script>
+
+
+  
+  <!-- 20170930 Google Console-->
+  <!-- 自动广告 -->
+  <!--
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-7996247261670961",
+      enable_page_level_ads: true
+    });
+  </script>
+
+  <meta name="google-site-verification" content="oD5ewjXVO5xIeD-HOx5LlcHxqeWfTgEO2IS491uxZ8c" />
+  -->
+  <!-- 20170930 -->
+  <!-- 20171007 百度统计-->
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9951afff4e34f23d370bf6958eaab534";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  <!-- 20171007 -->
+  <!-- 20180111 熊掌号 -->
+  <!-- <script src="//msite.baidu.com/sdk/c.js?appid=1589014467202518"></script> -->
+  <!-- 20180111 熊掌号 -->
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">学习《JavaScript 数据结构与算法》读书笔记-第8章</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/darkwing0605">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:darkwing@dark-wing.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By darkwing0605</span>
+          
+          <!-- Date -->
+          <span class="date-time info">Created On
+            <span class="date">2020-02-02</span>
+            <span class="time">15:09:29</span>
+          </span>
+          
+            <span class="date-time info">Updated On
+              <span class="date">2020-02-02</span>
+              <span class="time">15:09:29</span>
+            </span>
+          
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/Article/">Article</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/《JavaScript-数据结构与算法》读书笔记/">#《JavaScript 数据结构与算法》读书笔记</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>学习《JavaScript 数据结构与算法》读书笔记</p>
+<a id="more"></a>
+<h1 id="8-树"><a href="#8-树" class="headerlink" title="8 树"></a>8 树</h1><h2 id="8-2-树的相关术语"><a href="#8-2-树的相关术语" class="headerlink" title="8.2 树的相关术语"></a>8.2 树的相关术语</h2><p>一树结构包含一系列存在父子关系的节点，每个节点都有一个父节点（除了顶部的第一个节点）以及零个或多个子节点</p>
+<p>位于树顶部的节点叫做根节点，它没有父节点。树中的每个元素都叫做节点，节点分为内部节点和外部节点。至少有一个子节点的节点称为内部节点。没有子元素的几点称为外部节点或叶节点。</p>
+<p>一个节点可以有祖先和后代。一个节点（除了根节点）的祖先包括父节点、祖父节点、曾祖父节点等。一个节点的后代包括子节点、孙子节点、曾孙节点等。</p>
+<p>子树由节点和它的后代构成。</p>
+<p>节点的一个属性是深度，节点的深度取决于它的祖先节点的数量。</p>
+<p>树的高度取决于所有节点深度的最大值。一棵树也可以被分解成层级。根节点在第0级，它的子节点在第1层，以此类推。</p>
+<h2 id="8-3-二叉树和二叉搜索树"><a href="#8-3-二叉树和二叉搜索树" class="headerlink" title="8.3 二叉树和二叉搜索树"></a>8.3 二叉树和二叉搜索树</h2><p>二叉树中的节点最多只能有两个子节点：一个左侧子节点，另一个是右侧子节点。<br>二叉搜索树（BST）是二叉树的一种，但是它只允许在左侧节点存储（比父节点）小的值，在右侧节点存储（比父节点）大（或者等于）的值。</p>
+<h3 id="8-3-1-创建-BinarySearchTree-类"><a href="#8-3-1-创建-BinarySearchTree-类" class="headerlink" title="8.3.1 创建 BinarySearchTree 类"></a>8.3.1 创建 BinarySearchTree 类</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BinarySearchTree</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> node = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.key = key;</span><br><span class="line">		<span class="keyword">this</span>.left = <span class="literal">null</span>;</span><br><span class="line">		<span class="keyword">this</span>.right = <span class="literal">null</span>;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> root = <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="8-3-2-向树中插入一个键"><a href="#8-3-2-向树中插入一个键" class="headerlink" title="8.3.2 向树中插入一个键"></a>8.3.2 向树中插入一个键</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.insert = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> newNode = <span class="keyword">new</span> Node(key);</span><br><span class="line">	<span class="keyword">if</span> (root === <span class="literal">null</span>) &#123;</span><br><span class="line">		root = newNode;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		insertNode(root, newNode);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> insertNode = <span class="function"><span class="keyword">function</span>(<span class="params">node, newNode</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (newNode.key &lt; node.key) &#123;</span><br><span class="line">		<span class="keyword">if</span> (node.left === <span class="literal">null</span>) &#123;</span><br><span class="line">			node.left = newNode;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			insertNode(node.left, newNode);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> (node.right === <span class="literal">null</span>) &#123;</span><br><span class="line">			node.right = newNode;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			insertNode(node.right, newNode);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="8-4-树的遍历"><a href="#8-4-树的遍历" class="headerlink" title="8.4 树的遍历"></a>8.4 树的遍历</h2><p>遍历一棵树是指访问树的每个节点并对它们进行某种操作的过程。</p>
+<h3 id="8-4-1-中序遍历"><a href="#8-4-1-中序遍历" class="headerlink" title="8.4.1 中序遍历"></a>8.4.1 中序遍历</h3><p>中序遍历是一种以上行顺序访问BST所有节点的遍历方式，也就是以从最小到最大的顺序访问所有节点。中序遍历的一种应用就是对数进行排序操作。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.inOrderTraverse = <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">	inOrderTraverseNode(root, callback);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> inOrdertraverseNode = <span class="function"><span class="keyword">function</span>(<span class="params">node, callback</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (node !== <span class="literal">null</span>) &#123;</span><br><span class="line">		inOrderTraverseNode(node.left, callback);</span><br><span class="line">		callback(node.key);</span><br><span class="line">		inOrderTraverseNode(node.right, callback);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="8-4-2-先序遍历"><a href="#8-4-2-先序遍历" class="headerlink" title="8.4.2 先序遍历"></a>8.4.2 先序遍历</h3><p>先序遍历是以优先于后代节点的顺序访问每个节点的。先序遍历的一种应用是打印一个结构化的文档。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.preOrderTraverse = <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">	preOrderTraverseNode(root, callback);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> preOrderTraverseNode = <span class="function"><span class="keyword">function</span>(<span class="params">node, callback</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (node !== <span class="literal">null</span>) &#123;</span><br><span class="line">		callback(node.key);</span><br><span class="line">		preOrderTraverseNode(node.left, callback);</span><br><span class="line">		preOrderTraverseNode(node.right, callback);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="8-4-3-后序遍历"><a href="#8-4-3-后序遍历" class="headerlink" title="8.4.3 后序遍历"></a>8.4.3 后序遍历</h3><p>后序遍历则是先访问节点的后代节点，再访问节点本身，后序遍历的一种应用是计算一个目录和它的子目录中所有文件所占空间的大小</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.postOrderTraverse = <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">	postOrderTraverse(root, callback);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> postOrderTraverseNode = <span class="function"><span class="keyword">function</span>(<span class="params">node, callback</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (node !== <span class="literal">null</span>) &#123;</span><br><span class="line">		postOrderTraverseNode(node.left, callback);</span><br><span class="line">		postOrderTraverseNode(node.right, callback);</span><br><span class="line">		callback(node.key);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="8-5-搜索树中的值"><a href="#8-5-搜索树中的值" class="headerlink" title="8.5 搜索树中的值"></a>8.5 搜索树中的值</h2><h3 id="8-5-1-搜索最小值和最大值"><a href="#8-5-1-搜索最小值和最大值" class="headerlink" title="8.5.1 搜索最小值和最大值"></a>8.5.1 搜索最小值和最大值</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.min = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> minNode(root);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> minNode = <span class="function"><span class="keyword">function</span>(<span class="params">node</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (node) &#123;</span><br><span class="line">		<span class="keyword">while</span> (node &amp;&amp; node.left !== <span class="literal">null</span>) &#123;</span><br><span class="line">			node = node.left;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> node.key;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.max = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> maxNode(root);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> maxNode = <span class="function"><span class="keyword">function</span>(<span class="params">node</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (node) &#123;</span><br><span class="line">		<span class="keyword">while</span> (node &amp;&amp; node.right !== <span class="literal">null</span>) &#123;</span><br><span class="line">			node = node.right;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> node.key;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>对于寻找最小值，总是沿着树的左边；而对于寻找最大值，总是沿着树的右边。</p>
+<h3 id="8-5-2-搜索一个特定的值"><a href="#8-5-2-搜索一个特定的值" class="headerlink" title="8.5.2 搜索一个特定的值"></a>8.5.2 搜索一个特定的值</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.search = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> searchNode(root, key);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> searchNode = <span class="function"><span class="keyword">function</span>(<span class="params">node, key</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (node === <span class="literal">null</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (key &lt; node.key) &#123;</span><br><span class="line">		<span class="keyword">return</span> searchNode(node.left, key);</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> (key &gt; node.key) &#123;</span><br><span class="line">		<span class="keyword">return</span> searchNode(node.right, key);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="8-5-3-移除一个节点"><a href="#8-5-3-移除一个节点" class="headerlink" title="8.5.3 移除一个节点"></a>8.5.3 移除一个节点</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.remove = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">	root = removeNode(root, key);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> removeNode = <span class="function"><span class="keyword">function</span>(<span class="params">node, key</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (node === <span class="literal">null</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (key &lt; node.key) &#123;</span><br><span class="line">		node.left = removeNode(node.left, key);</span><br><span class="line">		<span class="keyword">return</span> node;</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> (key &gt; node.key) &#123;</span><br><span class="line">		node.right = removeNode(node.right, key);</span><br><span class="line">		<span class="keyword">return</span> node;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123; <span class="comment">/* 键等于node.key */</span></span><br><span class="line">		<span class="comment">/* 第一种情况 一个叶节点 */</span></span><br><span class="line">		<span class="keyword">if</span> (node.left === <span class="literal">null</span> &amp;&amp; node.right === <span class="literal">null</span>) &#123;</span><br><span class="line">			node = <span class="literal">null</span>;</span><br><span class="line">			<span class="keyword">return</span> node;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">/* 第二种情况 只有一个子节点的节点 */</span></span><br><span class="line">		<span class="keyword">if</span> (node.left === <span class="literal">null</span>) &#123;</span><br><span class="line">			node = node.right;</span><br><span class="line">			<span class="keyword">return</span> node;</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (node.right === <span class="literal">null</span>) &#123;</span><br><span class="line">			node = node.left;</span><br><span class="line">			<span class="keyword">return</span> node;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">/* 第三种情况 一个有两个子节点的节点 */</span></span><br><span class="line">		<span class="keyword">var</span> aux = findMinNode(node.right);</span><br><span class="line">		node.key = aux.key;</span><br><span class="line">		node.right = removeNode(node.right, aux.key);</span><br><span class="line">		<span class="keyword">return</span> node;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> findMinNode = <span class="function"><span class="keyword">function</span>(<span class="params">node</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (node &amp;&amp; node.left !== <span class="literal">null</span>) &#123;</span><br><span class="line">		node = node.left;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> node;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="8-6-自平衡树"><a href="#8-6-自平衡树" class="headerlink" title="8.6 自平衡树"></a>8.6 自平衡树</h2><p>BST存在一个问题：取决于你添加的节点数，树的一条边可能会非常深；也就是说，树的一条分支会有很多层，而其他的分支却只有几层。<br>这会在需要在某条边上添加、移除和搜索某个节点时引起的一些性能问题。为了解决这个问题，有一种树叫作 <code>Adelson-Velskii-Landi</code> 树（AVL树）。AVL树是一种自平衡二叉搜索树，意思是任何一个节点左右两侧子树的高度之差最多为1。也就是说这种书会在添加或移除节点时尽量试着成为一颗完全树。</p>
+<h3 id="8-6-1-Adelson-Velskii-Landi-树（AVL树）"><a href="#8-6-1-Adelson-Velskii-Landi-树（AVL树）" class="headerlink" title="8.6.1 Adelson-Velskii-Landi 树（AVL树）"></a>8.6.1 Adelson-Velskii-Landi 树（AVL树）</h3><h4 id="1-在-AVL-树中插入节点"><a href="#1-在-AVL-树中插入节点" class="headerlink" title="1 在 AVL 树中插入节点"></a>1 在 AVL 树中插入节点</h4><p>在 AVL 树中插入或移除节点和 BST 完全相同。然而， AVL 树的不同之处在于我们需要检验它的<strong>平衡因子</strong>，如果有需要，则将逻辑应用于树的自平衡。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> insertNode = <span class="function"><span class="keyword">function</span>(<span class="params">node, element</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (node === <span class="literal">null</span>) &#123;</span><br><span class="line">		node = <span class="keyword">new</span> Node(element);</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> (element &lt; node.key) &#123;</span><br><span class="line">		node.left = insertNode(node.left, element);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (node.left !== <span class="literal">null</span>) &#123;</span><br><span class="line">			<span class="comment">/* 确认是否需要平衡 */</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> (element &gt; node.key) &#123;</span><br><span class="line">		node.right = insertNode(node.right, element);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (node.right !== <span class="literal">null</span>) &#123;</span><br><span class="line">			<span class="comment">/* 确认是否需要平衡 */</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> node;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h5 id="计算平衡因子"><a href="#计算平衡因子" class="headerlink" title="计算平衡因子"></a>计算平衡因子</h5><p>在 AVL 树中，需要对每个节点计算右子树高度（hr）和左子树高度（hl）的差值，该值（hr - hl） 应为0、1或-1。如果结果不是这三个值之一，则需要平衡该 AVL 树。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> heightNode = <span class="function"><span class="keyword">function</span>(<span class="params">node</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (node === <span class="literal">null</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">Math</span>.max(heightNode(node.left), heightNode(node.right)) + <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>因此，在向左子树插入新节点时，需要计算其高度；如果高度大于1（即不为-1、0和1之一），就需要平衡左子树</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> insertNode = <span class="function"><span class="keyword">function</span>(<span class="params">node, element</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (node === <span class="literal">null</span>) &#123;</span><br><span class="line">		node = <span class="keyword">new</span> Node(element);</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> (element &lt; node.key) &#123;</span><br><span class="line">		node.left = insertNode(node.left, element);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (node.left !== <span class="literal">null</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> ((heightNode(node.left) - heightNode(node.right)) &gt; <span class="number">1</span>) &#123;</span><br><span class="line">				<span class="comment">/* 旋转 */</span></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> ((heightNode(node.right) - heightNode(node.left)) &gt; <span class="number">1</span>) &#123;</span><br><span class="line">				<span class="comment">/* 旋转 */</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h5 id="AVL-旋转"><a href="#AVL-旋转" class="headerlink" title="AVL 旋转"></a>AVL 旋转</h5><p>向 AVL 树插入节点时，可以执行单旋转或双旋转两种平衡操作，分别对应四种场景。</p>
+<h6 id="右-右（RR）-向左的单旋转"><a href="#右-右（RR）-向左的单旋转" class="headerlink" title="右-右（RR）:向左的单旋转"></a>右-右（RR）:向左的单旋转</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> rotationRR = <span class="function"><span class="keyword">function</span>(<span class="params">node</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> tmp = node.right;</span><br><span class="line">	node.right = tmp.left;</span><br><span class="line">	tmp.left = node;</span><br><span class="line">	<span class="keyword">return</span> tmp;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h6 id="左-左（LL）-向右的单旋转"><a href="#左-左（LL）-向右的单旋转" class="headerlink" title="左-左（LL）:向右的单旋转"></a>左-左（LL）:向右的单旋转</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> rotationLL = <span class="function"><span class="keyword">function</span>(<span class="params">node</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> tmp = node.left;</span><br><span class="line">	node.left = tmp.right;</span><br><span class="line">	tmp.right = node;</span><br><span class="line">	<span class="keyword">return</span> tmp;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h6 id="左-右（LR）-向右的双旋转"><a href="#左-右（LR）-向右的双旋转" class="headerlink" title="左-右（LR）:向右的双旋转"></a>左-右（LR）:向右的双旋转</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> rotationLR = <span class="function"><span class="keyword">function</span>(<span class="params">node</span>) </span>&#123;</span><br><span class="line">	node.left = rotationRR(node.left);</span><br><span class="line">	<span class="keyword">return</span> rotationLL(node);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h6 id="右-左（RL）-向左的双旋转"><a href="#右-左（RL）-向左的双旋转" class="headerlink" title="右-左（RL）:向左的双旋转"></a>右-左（RL）:向左的双旋转</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> rotationRL = <span class="function"><span class="keyword">function</span>(<span class="params">node</span>) </span>&#123;</span><br><span class="line">	node.right = rotationLL(node.right);</span><br><span class="line">	<span class="keyword">return</span> rotationRR(node);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="2-完成-insertNode-方法"><a href="#2-完成-insertNode-方法" class="headerlink" title="2 完成 insertNode 方法"></a>2 完成 insertNode 方法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> insertNode = <span class="function"><span class="keyword">function</span>(<span class="params">node, element</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (node === <span class="literal">null</span>) &#123;</span><br><span class="line">		node = <span class="keyword">new</span> Node(element);</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> (element &lt; node.key) &#123;</span><br><span class="line">		node.left = insertNode(node.left, element);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (node.left !== <span class="literal">null</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> ((heightNode(node.left) - heightNode(node.right)) &gt; <span class="number">1</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span> (element &lt; node.left.key) &#123;</span><br><span class="line">					node = rotationLL(node);</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					node = rotationLR(node);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> ((heightNode(node.right) - heightNode(node.left)) &gt; <span class="number">1</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span> (element &gt; node.right.key) &#123;</span><br><span class="line">					node = rotationRR(node);</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					node = rotationRL(node);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="8-6-2-更多关于二叉树的知识"><a href="#8-6-2-更多关于二叉树的知识" class="headerlink" title="8.6.2 更多关于二叉树的知识"></a>8.6.2 更多关于二叉树的知识</h3><p>红黑树<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">RedBlackTree</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> Colors = &#123;</span><br><span class="line">		RED: <span class="number">0</span>,</span><br><span class="line">		BLACK: <span class="number">1</span></span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> Node = <span class="function"><span class="keyword">function</span>(<span class="params">key, color</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.key = key;</span><br><span class="line">		<span class="keyword">this</span>.left = <span class="literal">null</span>;</span><br><span class="line">		<span class="keyword">this</span>.right = <span class="literal">null</span>;</span><br><span class="line">		<span class="keyword">this</span>.color = color;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">this</span>.flipColor = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (<span class="keyword">this</span>.color === Colors.RED) &#123;</span><br><span class="line">				<span class="keyword">this</span>.color = Colors.BLACK;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="keyword">this</span>.color = Colors.RED;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> root = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">this</span>.getRoot = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> root;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> isRed = <span class="function"><span class="keyword">function</span>(<span class="params">node</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (!node) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> node.color === Color.RED;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> flipColors = <span class="function"><span class="keyword">function</span>(<span class="params">node</span>) </span>&#123;</span><br><span class="line">		node.left.flipColor();</span><br><span class="line">		node.right.flipColor();</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> rotateLeft = <span class="function"><span class="keyword">function</span>(<span class="params">node</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">var</span> temp = node.right;</span><br><span class="line">		<span class="keyword">if</span> (temp !== <span class="literal">null</span>) &#123;</span><br><span class="line">			node.right = temp.right;</span><br><span class="line">			temp.left = node;</span><br><span class="line">			temp.color = node.color;</span><br><span class="line">			node.color = Colors.RED;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> temp;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> rotateRight = <span class="function"><span class="keyword">function</span>(<span class="params">node</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">var</span> temp = node.left;</span><br><span class="line">		<span class="keyword">if</span> (temp !== <span class="literal">null</span>) &#123;</span><br><span class="line">			node.left = temp.right;</span><br><span class="line">			temp.right = node;</span><br><span class="line">			temp.color = node.color;</span><br><span class="line">			node.color = Color.RED;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> temp;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> insertNode = <span class="function"><span class="keyword">function</span>(<span class="params">node, element</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (node === <span class="literal">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">new</span> Node(element, Color.RED);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">var</span> newRoot = node;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (element &lt; node.key) &#123;</span><br><span class="line">			node.left = insertNode(node.left, element);</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (element &gt; node.key) &#123;</span><br><span class="line">			node.right = insertNode(node.right, element);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			node.key = element;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (isRed(node.right) &amp;&amp; !isRed(node.left)) &#123;</span><br><span class="line">			newRoot = rotateLeft(node);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (isRed(node.left) &amp;&amp; isRed(node.left.left)) &#123;</span><br><span class="line">			newRoot = rotateRight(node);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (isRed(node.left) &amp;&amp; isRed(node.right)) &#123;</span><br><span class="line">			flipColors(node);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> newRoot;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">this</span>.insert = <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">		root = insertNode(root, element);</span><br><span class="line">		root.color = Colors.BLACK;</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+<!-- 20181125 Google Ad -->
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+  style="display:block; text-align:center;"
+  data-ad-layout="in-article"
+  data-ad-format="fluid"
+  data-ad-client="ca-pub-7996247261670961"
+  data-ad-slot="9091093676"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!-- 20181125 Google Ad -->
+
+<!-- 20171118 -->
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"Dark Wing's Personal Website","bdMini":"1","bdMiniList":false,"bdPic":"Dark Wing's Personal Website","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["sqq","qzone","tsina","tqf","weixin","fbook","twi","linkedin","copy"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["sqq","qzone","tsina","tqf","weixin","fbook","twi","linkedin","copy"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!-- 20171118 -->
+
+<!-- 20171030 -->
+<!-- 实验室 -->
+<!-- <center>
+<div id="cyReward" role="cylabs" data-use="reward"></div>
+</center> -->
+<!-- 20171030 -->
+
+<!-- 20180111 熊掌号 -->
+<!-- <div style="padding-left: 17px; padding-right: 17px;">
+    <script>cambrian.render('tail')</script>
+</div> -->
+<!-- 20180111 熊掌号 -->
+
+        </div>
+      </div>
+    </div>
+    
+<!-- 20171030 -->
+<!--PC和WAP自适应版-->
+<!-- <div id="SOHUCS" sid="学习《JavaScript 数据结构与算法》读书笔记-第8章"></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = 'cyti5JxXc'; 
+var conf = 'prod_b92a4c7254fbe603176fd52ee04c6071'; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script> -->
+<!-- <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cyti5JxXc"></script> -->
+<!-- 20171030 -->
+
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <!-- 20170814 -->
+  <div class="row">
+  	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" id="statistics" style="position:absolute;top:180px;left:30px"><script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=55rwupqghxb&amp;m=7&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script><!-- <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=55rwupqghxb&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script> --></div>
+  </div>
+  <!-- 20170814 -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Copyright &copy; 2017 - 2019 Dark Wing
+          <a target="_blank" href="beian.miit.gov.cn">冀ICP备17006927号</a>
+        </p>
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+			hljs.configure({
+				languages: ['javascript', 'css', 'html', 'scss', 'python'],
+			});
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
