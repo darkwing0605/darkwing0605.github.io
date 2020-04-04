@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="darkwing0605">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="学习《JavaScript 数据结构与算法》读书笔记-第9章-图"/>
+  <meta property="og:description" content="Dark Wing&amp;apos;s Personal Website" />
+  <meta property="og:site_name" content="Dark Wing"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://www.dark-wing.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Dark Wing" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Dark Wing-学习《JavaScript 数据结构与算法》读书笔记-第9章-图</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+    <!-- <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-114678369-1', 'auto');
+        ga('send', 'pageview');
+    </script> -->
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-114678369-1'></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-114678369-1');
+		</script>
+
+
+  
+  <!-- 20170930 Google Console-->
+  <!-- 自动广告 -->
+  <!--
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-7996247261670961",
+      enable_page_level_ads: true
+    });
+  </script>
+
+  <meta name="google-site-verification" content="oD5ewjXVO5xIeD-HOx5LlcHxqeWfTgEO2IS491uxZ8c" />
+  -->
+  <!-- 20170930 -->
+  <!-- 20171007 百度统计-->
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9951afff4e34f23d370bf6958eaab534";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  <!-- 20171007 -->
+  <!-- 20180111 熊掌号 -->
+  <!-- <script src="//msite.baidu.com/sdk/c.js?appid=1589014467202518"></script> -->
+  <!-- 20180111 熊掌号 -->
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">学习《JavaScript 数据结构与算法》读书笔记-第9章-图</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/darkwing0605">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:darkwing@dark-wing.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By darkwing0605</span>
+          
+          <!-- Date -->
+          <span class="date-time info">Created On
+            <span class="date">2020-04-04</span>
+            <span class="time">22:19:08</span>
+          </span>
+          
+            <span class="date-time info">Updated On
+              <span class="date">2020-04-04</span>
+              <span class="time">22:19:08</span>
+            </span>
+          
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/Article/">Article</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/《JavaScript-数据结构与算法》读书笔记/">#《JavaScript 数据结构与算法》读书笔记</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>学习《JavaScript 数据结构与算法》读书笔记</p>
+<a id="more"></a>
+<h1 id="9-图"><a href="#9-图" class="headerlink" title="9 图"></a>9 图</h1><h2 id="9-1-图的相关术语"><a href="#9-1-图的相关术语" class="headerlink" title="9.1 图的相关术语"></a>9.1 图的相关术语</h2><p><strong>图</strong>是网络结构的抽象模型。图是一组由<strong>边</strong>连接的<strong>节点</strong>（或<strong>顶点</strong>）。</p>
+<p>一个图<em>G=(V, E)</em>由以下元素组成<br><em>V</em>: 一组顶点<br><em>E</em>: 一组边，连接<em>V</em>中的顶点</p>
+<p>由一条边连接在一起的顶点称为<strong>相邻顶点</strong>。比如，A和B是相邻的，A和D是相邻的，A和C是相邻的，A和E不是相邻的。</p>
+<p>一个顶点的<strong>度</strong>是其相邻顶点的数量。比如，A和其他三个顶点相连接，因此，A的度为3；E和其他两个顶点项链，因此，E的度为2。</p>
+<p><strong>路径</strong>的顶点<em>v<sub>1</sub>, v<sub>2</sub>, … , v<sub>k</sub></em>的一个连续序列，其中<em>v<sub>i</sub></em>和<em>v<sub>i+1</sub></em>是相邻的。</p>
+<p><strong>简单路径</strong>要求不包含重复的顶点。除去最后一个顶点（因为它和第一个顶点是同一个顶点），<strong>环</strong>也是一个简单路径。</p>
+<p>如果图中不存在环，则称该图是<strong>无环的</strong>。如果图中每两个顶点都存在路径，则该图是<strong>连通的</strong>。</p>
+<h3 id="有向图和无向图"><a href="#有向图和无向图" class="headerlink" title="有向图和无向图"></a>有向图和无向图</h3><p>图可以是<strong>无向的</strong>（边没有方向）或是<strong>有向的</strong>。有向图的边有一个方向。</p>
+<p>如果图中每两个顶点间在双向上都存在路径，则该图是<strong>强连通的</strong>。</p>
+<p>图还可以是<strong>未加权的</strong>或是<strong>加权的</strong>，加权图的边被赋予了权值。</p>
+<p>我们可以使用图来解决计算机科学世界中的很多问题，比如搜索图中的一个特定顶点或搜索一条待定边，寻找图中的一条路径（从一个顶点到另一个顶点），寻找两个顶点之间的最短路径，以及环检测。</p>
+<h2 id="9-2-图的表示"><a href="#9-2-图的表示" class="headerlink" title="9.2 图的表示"></a>9.2 图的表示</h2><p>从数据结构的角度来说，我们有多种方式来表示图。在所有的表示法中，不存在绝对正确的方式。图的正确表示法取决于待解决的问题和图的类型。</p>
+<h3 id="9-2-1-邻接矩阵"><a href="#9-2-1-邻接矩阵" class="headerlink" title="9.2.1 邻接矩阵"></a>9.2.1 邻接矩阵</h3><p>图最常见的实现是邻接矩阵。每个节点都和一个整数相关联，该整数将作为数组的索引，我们用一个二维数组来表示顶点之间的连接。如果索引为<em>i</em>的节点和索引为<em>j</em>的节点相邻，则 <code>array[i][j] === 1</code> ，否则 <code>array[i][j] === 0</code>。 </p>
+<p>不是强连通的图（<strong>稀疏图</strong>）如果用邻接矩阵来表示，则矩阵中将会有很多0，这意味着我们浪费了计算机存储空间来表示根本不存在的边。例如，找给定顶点的相邻顶点，即使该顶点只有一个相邻顶点，我们也不得不迭代一整行。邻接矩阵表示法不够好的另一个理由是，图中顶点的数量可能会改变，而2维数组不太灵活。</p>
+<h3 id="9-2-2-邻接表"><a href="#9-2-2-邻接表" class="headerlink" title="9.2.2 邻接表"></a>9.2.2 邻接表</h3><p>我们也可以使用一种叫作<strong>邻接表</strong>的动态数据结构来表示图。邻接表由图中每个顶点的相邻顶点列表所组成。存在好几种方式来表示这种数据结构。我们可以用列表（数组）、链表，甚至是散列表或是字典来表示相邻顶点列表。</p>
+<p>尽管邻接表可能对大多数问题来说都是更好的选择，但以上两种表示法都很有用，且它们有着不同的性质（例如，要找出顶点<em>v</em>和<em>w</em>是否相邻，使用邻接矩阵会比较快）。</p>
+<h3 id="9-2-3-关联矩阵"><a href="#9-2-3-关联矩阵" class="headerlink" title="9.2.3 关联矩阵"></a>9.2.3 关联矩阵</h3><p>我们还可以用关联矩阵来表示图、在<strong>关联矩阵</strong>中，矩阵的行表示顶点，列表示边。我们使用二维矩阵来表示两者之间的连通性，如果顶点<em>v</em>是边<em>e</em><br>的入射点，则 <code>array[v][e] === 1</code> ;否则 <code>array[v][e] === 0</code> 。</p>
+<p>关联矩阵通常用于边的数量比顶点多的情况下，以节省空间和内存。</p>
+<h2 id="9-3-创建Graph类"><a href="#9-3-创建Graph类" class="headerlink" title="9.3 创建Graph类"></a>9.3 创建Graph类</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Graph</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="comment">/* 我们使用一个数组来存储图中所有顶点的名字 */</span></span><br><span class="line">	<span class="keyword">var</span> vertices = [];</span><br><span class="line">	<span class="comment">/* 以及一个字典来存储邻接表 */</span></span><br><span class="line">	<span class="keyword">var</span> adjList = <span class="keyword">new</span> Dictionary();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.addVertex = <span class="function"><span class="keyword">function</span>(<span class="params">v</span>) </span>&#123;</span><br><span class="line">	vertices.push(v);</span><br><span class="line">	adjList.set(v, []);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.addEdge = <span class="function"><span class="keyword">function</span>(<span class="params">v, w</span>) </span>&#123;</span><br><span class="line">	adjList.get(v).push(w);</span><br><span class="line">	adjList.get(w).push(v);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.toString = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> s = <span class="string">''</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; vertices.length; i++) &#123;</span><br><span class="line">		s += vertices[i] + <span class="string">' -&gt; '</span>;</span><br><span class="line">		<span class="keyword">var</span> neighbors = adjList.get(vertices[i]);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; neighbors.length; j++) &#123;</span><br><span class="line">			s += neighbors[j] + <span class="string">' '</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		s += <span class="string">'\n'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> s;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>测试下面这段代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> graph = <span class="keyword">new</span> Graph();</span><br><span class="line"><span class="keyword">var</span> myVertices = [<span class="string">'A'</span>,<span class="string">'B'</span>,<span class="string">'C'</span>,<span class="string">'D'</span>,<span class="string">'E'</span>,<span class="string">'F'</span>,<span class="string">'G'</span>,<span class="string">'H'</span>,<span class="string">'I'</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; myVertices.length; i++) &#123;</span><br><span class="line">	graph.addVertex(myVertices[i]);</span><br><span class="line">&#125;</span><br><span class="line">graph.addEdge(<span class="string">'A'</span>, <span class="string">'B'</span>);</span><br><span class="line">graph.addEdge(<span class="string">'A'</span>, <span class="string">'C'</span>);</span><br><span class="line">graph.addEdge(<span class="string">'A'</span>, <span class="string">'D'</span>);</span><br><span class="line">graph.addEdge(<span class="string">'C'</span>, <span class="string">'D'</span>);</span><br><span class="line">graph.addEdge(<span class="string">'C'</span>, <span class="string">'G'</span>);</span><br><span class="line">graph.addEdge(<span class="string">'D'</span>, <span class="string">'G'</span>);</span><br><span class="line">graph.addEdge(<span class="string">'D'</span>, <span class="string">'H'</span>);</span><br><span class="line">graph.addEdge(<span class="string">'B'</span>, <span class="string">'E'</span>);</span><br><span class="line">graph.addEdge(<span class="string">'B'</span>, <span class="string">'F'</span>);</span><br><span class="line">graph.addEdge(<span class="string">'E'</span>, <span class="string">'I'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(graph.toString());</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">A -&gt; B C D</span><br><span class="line">B -&gt; A E F</span><br><span class="line">C -&gt; A D G</span><br><span class="line">D -&gt; A C G H</span><br><span class="line">E -&gt; B I</span><br><span class="line">F -&gt; B</span><br><span class="line">G -&gt; C D</span><br><span class="line">H -&gt; D</span><br><span class="line">I -&gt; E</span><br></pre></td></tr></table></figure>
+<h2 id="9-4-图的遍历"><a href="#9-4-图的遍历" class="headerlink" title="9.4 图的遍历"></a>9.4 图的遍历</h2><p>和树数据结构类似，我们可以访问图的所有节点，有两种算法可以对图进行遍历：<strong>广度优先搜索（Breadth-First Search, BFS）</strong> 和 <strong>深度优先搜索（Depth-First Search, DFS）</strong>。图遍历可以用来寻找特定的顶点或寻找两个顶点之间的路径，检查图是否连通，检查图是否含有环等。</p>
+<p>图遍历算法的思想是必须最总每一个第一次访问的节点，并且追踪有哪些节点还没有被完全探索。对于两种图遍历算法，都需要明确指出第一个被访问的顶点。</p>
+<p>完全探索一个顶点要求我们查看该顶点的每一条边。对于每一条边所连接的没有被访问过的顶点，将其标注为被发现的，并将其加进待访问顶点列表中。</p>
+<p>为了保证算法的效率，务必访问每个顶点至多两次。连通图中每条边和顶点都会被访问到。</p>
+<p>广度优先搜索算法和深度优先搜索算法基本上是相同的，只有一点不同，那就是待访问顶点列表的数据结构。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">算法</th>
+<th style="text-align:center">数据结构</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">深度优先搜索</td>
+<td style="text-align:center">栈</td>
+<td style="text-align:center">通过将顶点存入栈中，顶点是沿着路径被搜索的，存在新的相邻顶点就去访问</td>
+</tr>
+<tr>
+<td style="text-align:center">广度优先搜索</td>
+<td style="text-align:center">队列</td>
+<td style="text-align:center">通过将顶点存入队列中，最先入队列的顶点先被探索</td>
+</tr>
+</tbody>
+</table>
+<p>当要标注已经访问过的顶点时，我们用三种颜色来反映它们的状态。</p>
+<blockquote>
+<p>白色： 表示该顶点还没有被访问<br>灰色： 表示该顶点被访问过，但并未被探索过<br>黑色： 表示该顶点被访问过且被完全探索过</p>
+</blockquote>
+<p>这就是之前提到的务必访问每个顶点最多两次的原因。</p>
+<h3 id="9-4-1-广度优先搜索"><a href="#9-4-1-广度优先搜索" class="headerlink" title="9.4.1 广度优先搜索"></a>9.4.1 广度优先搜索</h3><p>广度优先搜索算法会从指定的第一个顶点开始遍历图，先访问其所有的相邻点，就像一次访问图的一层。换句话说，就是先宽厚深地访问顶点。</p>
+<p>以下是从顶点 v 开始的广度优先搜索算法所遵循的步骤：</p>
+<blockquote>
+<p>创建一个队列     Q</p>
+<p>将 v 标注为被发现的（灰色），并将 v 入队列 Q</p>
+<p>如果 Q 非空，则运行以下步骤</p>
+<blockquote>
+<p>将 u 从 Q 中出队列</p>
+<p>将标注 u 为被发现的（灰色）</p>
+<p>将 u 所有未被访问过的邻点（白色）入队列</p>
+<p>将 u 标注为已被探索的（黑色）</p>
+</blockquote>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> initializeColor = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> color = [];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; vertices.length; i++) &#123;</span><br><span class="line">		color[vertices[i]] = <span class="string">'white'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> color;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.bfs = <span class="function"><span class="keyword">function</span>(<span class="params">v, callback</span>) </span>&#123;</span><br><span class="line">	<span class="comment">/* 将color数组初始化为white */</span></span><br><span class="line">	<span class="keyword">var</span> color = initializeColor();</span><br><span class="line">	<span class="comment">/* 声明和创建一个Queue实例 */</span></span><br><span class="line">	queue = <span class="keyword">new</span> Queue();</span><br><span class="line">	<span class="comment">/* bfs接受一个顶点作为算法的起始点，将次顶点入队列 */</span></span><br><span class="line">	queue.enqueue(v);</span><br><span class="line"></span><br><span class="line">	<span class="comment">/* 如果非空 */</span></span><br><span class="line">	<span class="keyword">while</span> (!queue.isEmpty()) &#123;</span><br><span class="line">		<span class="comment">/* 从队列中移除一个顶点 */</span></span><br><span class="line">		<span class="keyword">var</span> u = queue.dequeue(),</span><br><span class="line">			<span class="comment">/* 取得一个包含其所有邻点的邻接表 */</span></span><br><span class="line">			neighbors = adjList.get(u);</span><br><span class="line">			<span class="comment">/* 该顶点被标注为grey，表示已发现（但还未完成探索） */</span></span><br><span class="line">			color[u] = <span class="string">'grey'</span>;</span><br><span class="line">		<span class="comment">/* 对于u的每个邻点 */</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; neighbors.length; i++) &#123;</span><br><span class="line">			<span class="comment">/* 取值（该顶点的名字） */</span></span><br><span class="line">			<span class="keyword">var</span> w = neighbors[i];</span><br><span class="line">			<span class="comment">/* 如果还未被访问过 */</span></span><br><span class="line">			<span class="keyword">if</span> (color[w] === <span class="string">'white'</span>) &#123;</span><br><span class="line">				<span class="comment">/* 标注为grey */</span></span><br><span class="line">				color[w] = <span class="string">'grey'</span>;</span><br><span class="line">				<span class="comment">/* 并将这个顶点加入队列中 */</span></span><br><span class="line">				queue.enqueue(w);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">/* 当完成探索该顶点和其邻点后，标注为black（已探索过的） */</span></span><br><span class="line">		color[u] = <span class="string">'black'</span>;</span><br><span class="line">		<span class="keyword">if</span> (callback) &#123;</span><br><span class="line">			callback(u);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">printNode</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'Visited vertex: '</span> + value);</span><br><span class="line">&#125;</span><br><span class="line">graph.bfs(myVertices[<span class="number">0</span>], printNode)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Visited vertex: A</span><br><span class="line">Visited vertex: B</span><br><span class="line">Visited vertex: C</span><br><span class="line">Visited vertex: D</span><br><span class="line">Visited vertex: E</span><br><span class="line">Visited vertex: F</span><br><span class="line">Visited vertex: G</span><br><span class="line">Visited vertex: H</span><br><span class="line">Visited vertex: I</span><br></pre></td></tr></table></figure>
+<h4 id="1-使用BFS寻找最短路径"><a href="#1-使用BFS寻找最短路径" class="headerlink" title="1. 使用BFS寻找最短路径"></a>1. 使用BFS寻找最短路径</h4><p>给定一个图G和源顶点v，找出对每个顶点u，u和v之间最短路径的距离（以边的数量计）<br>对于给定顶点v，广度优先算法会访问所有与其距离为1的顶点，接着是距离为2的顶点，以此类推。因此可以用广度优先算法来解这个问题。可以修改bfs方法以返回给我们一些信息</p>
+<blockquote>
+<p>从v到u的距离d[u]</p>
+<p>前溯点pred[u]，用来推导出从v到其他每个顶点u的最短路径</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.BFS = <span class="function"><span class="keyword">function</span>(<span class="params">v</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> color = initializeColor(),</span><br><span class="line">		queue = <span class="keyword">new</span> Queue(),</span><br><span class="line">		<span class="comment">/* 声明数组d表示距离 */</span></span><br><span class="line">		d = [],</span><br><span class="line">		<span class="comment">/* 前溯点 */</span></span><br><span class="line">		pred = [];</span><br><span class="line">	queue.enqueue(v);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; vertices.length; i++) &#123;</span><br><span class="line">		<span class="comment">/* 用0初始化数组d */</span></span><br><span class="line">		d[vertices[i]] = <span class="number">0</span>;</span><br><span class="line">		<span class="comment">/* 用null初始化数组pred */</span></span><br><span class="line">		pred[vertices[i]] = <span class="literal">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (!queue.isEmpty()) &#123;</span><br><span class="line">		<span class="keyword">var</span> u = queue.dequeue(),</span><br><span class="line">			neighbors = adjList.get(u);</span><br><span class="line">		color[u] = <span class="string">'grey'</span>;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; neighbors.length; i++) &#123;</span><br><span class="line">			<span class="keyword">var</span> w = neighbors[i];</span><br><span class="line">			<span class="keyword">if</span> (color[w] === <span class="string">'white'</span>) &#123;</span><br><span class="line">				color[w] = <span class="string">'grey'</span>;</span><br><span class="line">				<span class="comment">/* 给d[u]加1来设置v和w之间的距离 */</span></span><br><span class="line">				d[w] = d[u] + <span class="number">1</span>;</span><br><span class="line">				<span class="comment">/* 当发现顶点u的邻点w，设置w的前溯点为u */</span></span><br><span class="line">				pred[w] = u;</span><br><span class="line">				queue.enqueue(w);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		color[u] = <span class="string">'black'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">		distances: d,</span><br><span class="line">		predecessors: pred</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> shortestPathA = graph.BFS(myVertices[<span class="number">0</span>]);</span><br><span class="line"><span class="built_in">console</span>.log(shortestPathA);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">distances: [A: <span class="number">0</span>, <span class="attr">B</span>: <span class="number">1</span>, <span class="attr">C</span>: <span class="number">1</span>, <span class="attr">D</span>: <span class="number">1</span>, <span class="attr">E</span>: <span class="number">2</span>, <span class="attr">F</span>: <span class="number">2</span>, <span class="attr">G</span>: <span class="number">2</span>, <span class="attr">H</span>: <span class="number">2</span> , <span class="attr">I</span>: <span class="number">3</span>],</span><br><span class="line">predecessors: [A: <span class="literal">null</span>, <span class="attr">B</span>: <span class="string">"A"</span>, <span class="attr">C</span>: <span class="string">"A"</span>, <span class="attr">D</span>: <span class="string">"A"</span>, <span class="attr">E</span>: <span class="string">"B"</span>, <span class="attr">F</span>: <span class="string">"B"</span>, <span class="attr">G</span>: <span class="string">"C"</span>, <span class="attr">H</span>: <span class="string">"D"</span>, <span class="attr">I</span>: <span class="string">"E"</span>]</span><br></pre></td></tr></table></figure>
+<p>通过前溯点数组，我们可以用下面这段代码来构建从顶点A到其他顶点的路径</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 用顶点A作为源顶点 */</span></span><br><span class="line"><span class="keyword">var</span> fromVertex = myVertices[<span class="number">0</span>];</span><br><span class="line"><span class="comment">/* 其他顶点 */</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; myVertices.length; i++) &#123;</span><br><span class="line">	<span class="comment">/* 从顶点数组得到toVertex */</span></span><br><span class="line">	<span class="keyword">var</span> toVertex = myVertices[i],</span><br><span class="line">		<span class="comment">/* 创建一个栈来存储路径值 */</span></span><br><span class="line">		path = <span class="keyword">new</span> Stack();</span><br><span class="line">	<span class="comment">/* 追溯toVertex到fromVertex的路径 */</span></span><br><span class="line">	<span class="comment">/* 变量v被赋值为其前溯点的值，这样我们能够方向追溯这条路径 */</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> v = toVertex; v !== fromVertex; v = shortestPathA.predecessors[v]) &#123;</span><br><span class="line">		<span class="comment">/* 将变量v添加到栈中 */</span></span><br><span class="line">		path.push(v);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/* 最后源顶点也会被添加到栈中，以得到完整路径 */</span></span><br><span class="line">	path.push(fromVertex);</span><br><span class="line">	<span class="comment">/* 创建一个s字符串，并将源顶点赋值给它 */</span></span><br><span class="line">	<span class="comment">/* 它是最后一个加入栈中的， 所以它是第一个被弹出的项 */</span></span><br><span class="line">	<span class="keyword">var</span> s = path.pop();</span><br><span class="line">	<span class="comment">/* 如果非空 */</span></span><br><span class="line">	<span class="keyword">while</span> (!path.isEmpty()) &#123;</span><br><span class="line">		<span class="comment">/* 从栈中移出一个项并将其拼接到字符串s的后面 */</span></span><br><span class="line">		s += <span class="string">' - '</span> + path.pop();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">console</span>.log(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">A - B</span><br><span class="line">A - C</span><br><span class="line">A - D</span><br><span class="line">A - B - E</span><br><span class="line">A - B - F</span><br><span class="line">A - C - G</span><br><span class="line">A - D - H</span><br><span class="line">A - B - E - I</span><br></pre></td></tr></table></figure>
+<p>这样，我们得到了从顶点A到图中其他顶点的最短路径（衡量标准是边的数量）</p>
+<h4 id="2-深入学习最短路径算法"><a href="#2-深入学习最短路径算法" class="headerlink" title="2.深入学习最短路径算法"></a>2.深入学习最短路径算法</h4><p>本章中的图不是加权图。如果要计算加权图中的最短路径（例如，城市A和城市B之间的最短路径：GPS和Google Maps中用到的算法），广度优先搜索未必合适。</p>
+<p>举些例子，<strong>Dijkstra算法</strong>解决了单源最短路径问题。<strong>Bellman-Ford算法</strong>解决了边权值为负的单源最短路径问题。<strong>A*搜索算法</strong>解决了求仅一对顶点间的最短路径问题，它用经验法则来加速搜索过程。<strong>Floyd-Warshall算法</strong>解决了求所有顶点对间的最短路径这一问题。</p>
+<h3 id="9-4-2-深度优先搜索"><a href="#9-4-2-深度优先搜索" class="headerlink" title="9.4.2 深度优先搜索"></a>9.4.2 深度优先搜索</h3><p>深度优先搜算法将会从第一个指定的顶点开始遍历图，沿着路径知道这条路径最后一个顶点被访问了，接着原路退回并探索下一条路径。换句话说，它是先深度后广度的访问顶点。</p>
+<p>深度优先搜索算法不需要一个源顶点。在深度优先搜索算法中，若图中顶点v未访问，则访问改顶点v</p>
+<blockquote>
+<p>标注v为被发现的（灰色）</p>
+<p>对于v的所有未访问的邻点w，访问顶点w，标注v为已被探索的（黑色）</p>
+</blockquote>
+<p>深度优先搜索的步骤是递归的，这意味着深度优先搜索算法使用栈来存储函数调用（由递归调用所创建的栈）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.dfs = <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">	<span class="comment">/*首先创建颜色数组*/</span></span><br><span class="line">	<span class="keyword">var</span> color = initializeColor();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; vertices.length; i++) &#123;</span><br><span class="line">		<span class="comment">/* 对于图实例中每一个未被访问过的顶点 */</span></span><br><span class="line">		<span class="keyword">if</span> (color[vertices[i]] === <span class="string">'white'</span>) &#123;</span><br><span class="line">			<span class="comment">/* 调用私有的递归函数，传递的参数为顶点，颜色数组以及回调函数 */</span></span><br><span class="line">			dfsVisit(vertices[i], color, callback);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> dfsVisit = <span class="function"><span class="keyword">function</span>(<span class="params">u, color, callback</span>) </span>&#123;</span><br><span class="line">	color[u] = <span class="string">'grey'</span>;</span><br><span class="line">	<span class="keyword">if</span> (callback) &#123;</span><br><span class="line">		callback(u);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> neighbors = adjList.get(u);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; neighbors.length; i++) &#123;</span><br><span class="line">		<span class="keyword">var</span> w = neighbors[i];</span><br><span class="line">		<span class="keyword">if</span> (color[w] === <span class="string">'white'</span>) &#123;</span><br><span class="line">			dfsVisit(w, color, callback);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	color[u] = <span class="string">'black'</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">graph.dfs(printNode);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Visited vertex: A</span><br><span class="line">Visited vertex: B</span><br><span class="line">Visited vertex: E</span><br><span class="line">Visited vertex: I</span><br><span class="line">Visited vertex: F</span><br><span class="line">Visited vertex: C</span><br><span class="line">Visited vertex: D</span><br><span class="line">Visited vertex: G</span><br><span class="line">Visited vertex: H</span><br></pre></td></tr></table></figure>
+<h4 id="1-探索深度优先算法"><a href="#1-探索深度优先算法" class="headerlink" title="1.探索深度优先算法"></a>1.探索深度优先算法</h4><p>对于给定的图G，我们希望深度优先算法搜索算法遍历图G的所有节点，构建“森林”（<strong>有根树</strong>的一个集合）以及一组源顶点（根），并输出两个数组：发现时间和完成探索实践。我们可以修改dfs方法来返回给我们一些信息</p>
+<blockquote>
+<p>顶点u的发现时间d[u]</p>
+<p>当顶点u被标注为黑色时，u的完成探索实践f[u]</p>
+<p>顶点u的前溯点p[u]</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">this</span>.DFS = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> color = initializeColor(),</span><br><span class="line">		d = [],</span><br><span class="line">		f = [],</span><br><span class="line">		p = [],</span><br><span class="line">		time = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; vertices.length; i++) &#123;</span><br><span class="line">		f[vertices[i]] = <span class="number">0</span>;</span><br><span class="line">		d[vertices[i]] = <span class="number">0</span>;</span><br><span class="line">		p[vertices[i]] = <span class="literal">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; vertices.length; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (color[vertices[i]] === <span class="string">'white'</span>) &#123;</span><br><span class="line">			DFSVisit(vertices[i], color, d, f, p);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">		discovery: d,</span><br><span class="line">		finished: f,</span><br><span class="line">		predecessors: p</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> DFSVisit = <span class="function"><span class="keyword">function</span>(<span class="params">u, color, d, f, p</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'discovered'</span> + u);</span><br><span class="line">	color[u] = <span class="string">'grey'</span>;</span><br><span class="line">	<span class="comment">/* 当一个顶点第一次被发现时，我们追踪其发现时间 */</span></span><br><span class="line">	d[u] = ++time;</span><br><span class="line">	<span class="keyword">var</span> neighbors = adjList.get(u);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; neighbors.length; i++) &#123;</span><br><span class="line">		<span class="keyword">var</span> w = neightbors[i];</span><br><span class="line">		<span class="keyword">if</span> (color[w] === <span class="string">'white'</span>) &#123;</span><br><span class="line">			<span class="comment">/* 当它是由引自顶点u的边而被发现的，我们追踪它的前溯点 */</span></span><br><span class="line">			p[w] = u;</span><br><span class="line">			DFSVisit(w, color, d, f, p);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	color[u] = <span class="string">'black'</span>;</span><br><span class="line">	<span class="comment">/* 当这个顶点被完全探索后，我们追踪其完成时间 */</span></span><br><span class="line">	f[u] = ++time;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'explored'</span> + u);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>深度优先算法思想：边是从最近发现的顶点u处被向外探索的。只有连接到未发现的顶点的边被搜索了。当u所有的边都被探索了，该算法回退到u被发现的地方去探索其他的边。这个过程持续到我们发现了所有从原始顶点能够触及的顶点。如果还留有任何其他未被发现的顶点，我们对新源顶点重复这个过程。重复个算法，直到图中所有顶点都被探索了。</p>
+<p>对于改进过的深度优先算法，有两点需要注意</p>
+<blockquote>
+<p>时间time变量值的范围只可能在图顶点数量的一倍到两倍之间</p>
+<p>对于所有的顶点u，d[u] &lt; f[u]（意味着，发现时间的值比完成事件的值小，完成事件意思是所有顶点都已经被探索过了）。</p>
+</blockquote>
+<p>在这两个假设下，我们有如下的规则：<br><code>1 &lt;= d[u] &lt; f[u] &lt;= 2|V|</code></p>
+<h4 id="2-拓扑排序-使用深度优先搜索"><a href="#2-拓扑排序-使用深度优先搜索" class="headerlink" title="2.拓扑排序 使用深度优先搜索"></a>2.拓扑排序 使用深度优先搜索</h4><p>有向无环图（DAG）</p>
+<p>当我们需要编排一些任务或步骤的执行顺序时，这称为<strong>拓扑排序</strong>（topological sorting，亦写作topsrt或toposort）</p>
+<p>拓扑排序只能应用于DAG</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">graph = <span class="keyword">new</span> Graph();</span><br><span class="line">myVertices = [<span class="string">'A'</span>,<span class="string">'B'</span>,<span class="string">'C'</span>,<span class="string">'D'</span>,<span class="string">'E'</span>,<span class="string">'F'</span>];</span><br><span class="line"><span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;myVertices.length; i++)&#123;</span><br><span class="line"> graph.addVertex(myVertices[i]);</span><br><span class="line">&#125;</span><br><span class="line">graph.addEdge(<span class="string">'A'</span>, <span class="string">'C'</span>);</span><br><span class="line">graph.addEdge(<span class="string">'A'</span>, <span class="string">'D'</span>);</span><br><span class="line">graph.addEdge(<span class="string">'B'</span>, <span class="string">'D'</span>);</span><br><span class="line">graph.addEdge(<span class="string">'B'</span>, <span class="string">'E'</span>);</span><br><span class="line">graph.addEdge(<span class="string">'C'</span>, <span class="string">'F'</span>);</span><br><span class="line">graph.addEdge(<span class="string">'F'</span>, <span class="string">'E'</span>);</span><br><span class="line"><span class="keyword">var</span> result = graph.DFS();</span><br></pre></td></tr></table></figure>
+<p>执行改进版本的深度优先搜索算法，以倒序来排序完成事件数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B - A - D - C - F - E</span><br></pre></td></tr></table></figure>
+<p>这个拓扑排序结果仅是多种可能性之一。如果稍微修改一下算法，就会有不同的结果</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A - B - C - D - F - E</span><br></pre></td></tr></table></figure>
+<p>这也是众多其他可能性中的一个</p>
+<h2 id="9-5-最短路径算法"><a href="#9-5-最短路径算法" class="headerlink" title="9.5 最短路径算法"></a>9.5 最短路径算法</h2><h3 id="9-5-1-Dijkstra-算法"><a href="#9-5-1-Dijkstra-算法" class="headerlink" title="9.5.1 Dijkstra 算法"></a>9.5.1 Dijkstra 算法</h3><p>Dijkstra算法是一种计算从单个源到所有其他源的最短路径的<strong>贪心算法</strong>。</p>
+<p>首先先声明图的邻接矩阵<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> graph = [</span><br><span class="line">	[<span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>],</span><br><span class="line">	[<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">0</span>],</span><br><span class="line">	[<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">3</span>, <span class="number">0</span>],</span><br><span class="line">	[<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">2</span>],</span><br><span class="line">	[<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">3</span>, <span class="number">0</span>, <span class="number">2</span>],</span><br><span class="line">	[<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>]</span><br><span class="line">];</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.dijkstra = <span class="function"><span class="keyword">function</span>(<span class="params">src</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> dist = [],</span><br><span class="line">		visited = [],</span><br><span class="line">		length = <span class="keyword">this</span>.graph.length;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">		<span class="comment">/* 把所有的距离（dist）初始化为无限大（JavaScript最大的数 INF = Number.MAX_SAFE_INTEGER） */</span></span><br><span class="line">		dist[i] = INF;</span><br><span class="line">		<span class="comment">/* 将visited初始化为false */</span></span><br><span class="line">		visited[i] = <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/* 把源顶点到自己的距离设为0 */</span></span><br><span class="line">	dist[src] = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/* 找出到其余顶点的最短路径 */</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">		<span class="comment">/* 为此，需要从尚未处理的顶点中选出距离最近的顶点 */</span></span><br><span class="line">		<span class="keyword">var</span> u = minDistance(dist, visited);</span><br><span class="line">		<span class="comment">/* 把选出的点标为true，以免重复计算 */</span></span><br><span class="line">		visited[u] = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> v = <span class="number">0</span>; v &lt; length; v++) &#123;</span><br><span class="line">			<span class="comment">/* 如果找到更短的路径，则更新最短路径的值 */</span></span><br><span class="line">			<span class="keyword">if</span> (!visited[v] &amp;&amp; <span class="keyword">this</span>.graph[u][v] !== <span class="number">0</span> &amp;&amp; dist[u] !== INF &amp;&amp; dist[u] + <span class="keyword">this</span>.graph[u][v] &lt; dist[v]) &#123;</span><br><span class="line">				<span class="comment">/* 处理完所有顶点之后，返回从源顶点（src）到图中其他顶点最短路径的结果 */</span></span><br><span class="line">				dist[v] = dist[u] + <span class="keyword">this</span>.graph[u][v];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> dist;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>要计算顶点间的minDCistance，就要搜索dist数组中的最小值，返回它在数组中的索引：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> minDistance = <span class="function"><span class="keyword">function</span>(<span class="params">dist, visited</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> min = INF,</span><br><span class="line">		minIndex = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> v = <span class="number">0</span>; v &lt; dist.length; v++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (visited[v] === <span class="literal">false</span> &amp;&amp; dist[v] &lt;= min) &#123;</span><br><span class="line">			min = dist[v];</span><br><span class="line">			minIndex = v;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> minIndex;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>对本节开始的图执行以上算法，会得到如下输出<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span></span><br><span class="line"><span class="number">2</span> <span class="number">3</span></span><br><span class="line"><span class="number">3</span> <span class="number">6</span></span><br><span class="line"><span class="number">4</span> <span class="number">4</span></span><br><span class="line"><span class="number">5</span> <span class="number">6</span></span><br></pre></td></tr></table></figure></p>
+<p><em>也可以修改算法，将最短路径的值和路径一同返回</em></p>
+<h3 id="9-5-2-Floyd-Warshall算法"><a href="#9-5-2-Floyd-Warshall算法" class="headerlink" title="9.5.2 Floyd-Warshall算法"></a>9.5.2 Floyd-Warshall算法</h3><p>Floyd-Warshall算法是一种计算图中所有最短路径的<strong>动态规划算法</strong>。通过该算法，我们可以找出所有源到所有顶点的最短路径<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.floydWarshall = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> dist = [],</span><br><span class="line">		length = <span class="keyword">this</span>.graph.length,</span><br><span class="line">		i,</span><br><span class="line">		j,</span><br><span class="line">		k;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/* 把dist数组初始化为每个顶点之间的权值 */</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">		dist[i] = [];</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; length; j++) &#123;</span><br><span class="line">			dist[i][j] = <span class="keyword">this</span>.graph[i][j];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/* 通过k，得到i途径顶点0至k，到达j的最短路径 */</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; length; k++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; length; j++) &#123;</span><br><span class="line">				<span class="comment">/* 判断i经过顶点k到达j的路径是否比已有的最短路径更短 */</span></span><br><span class="line">				<span class="keyword">if</span> (dist[i][k] + dist[k][j] &lt; dist[i][j]) &#123;</span><br><span class="line">					<span class="comment">/* 如果是更短的路径，更新 */</span></span><br><span class="line">					dist[i][j] = dist[i][k] + dist[k][j];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> dist;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>对本节开始的图执行以上算法，会得到如下输出</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span>   <span class="number">2</span>   <span class="number">3</span>   <span class="number">6</span>   <span class="number">4</span>   <span class="number">6</span></span><br><span class="line">INF <span class="number">0</span>   <span class="number">1</span>   <span class="number">4</span>   <span class="number">2</span>   <span class="number">4</span></span><br><span class="line">INF INF <span class="number">0</span>   <span class="number">6</span>   <span class="number">3</span>   <span class="number">5</span></span><br><span class="line">INF INF INF <span class="number">0</span>   INF <span class="number">2</span></span><br><span class="line">INF INF INF <span class="number">3</span>   <span class="number">0</span>   <span class="number">2</span></span><br><span class="line">INF INF INF INF INF <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<h2 id="9-6-最小生成树"><a href="#9-6-最小生成树" class="headerlink" title="9.6 最小生成树"></a>9.6 最小生成树</h2><p><strong>最小生成树（MST）</strong></p>
+<h3 id="9-6-1-Prim算法"><a href="#9-6-1-Prim算法" class="headerlink" title="9.6.1 Prim算法"></a>9.6.1 Prim算法</h3><p>Prim算法是一种求解加权无向连通图的MST问题的贪心算法，它能找出一个边的子集，使得其构成的树包含图中的所有顶点，且边的权值之和最小</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.prim = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> parent = [],</span><br><span class="line">		key = [],</span><br><span class="line">		visited = [],</span><br><span class="line">		i;</span><br><span class="line">	length = <span class="keyword">this</span>.graph.length,</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">		<span class="comment">/* 把所有顶点（key）初始化为无限大 */</span></span><br><span class="line">		key[i] = INF;</span><br><span class="line">		<span class="comment">/* 把visited[]初始化为false */</span></span><br><span class="line">		visited[i] = <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/* 选择第一个key作为第一个顶点 */</span></span><br><span class="line">	key[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">	<span class="comment">/* 因为第一个顶点总是MST的根节点，所以为-1 */</span></span><br><span class="line">	parent[<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">		<span class="comment">/* 从未处理的顶点集合中选出key值最小的顶点（和Digkstra一样） */</span></span><br><span class="line">		<span class="keyword">var</span> u = minKey(key, visited);</span><br><span class="line">		<span class="comment">/* 防止重复计算 */</span></span><br><span class="line">		visited[u] = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> v = <span class="number">0</span>; v &lt; length; v++) &#123;</span><br><span class="line">			<span class="comment">/* 如果得到更小的权值 */</span></span><br><span class="line">			<span class="keyword">if</span> (<span class="keyword">this</span>.graph[u][v] &amp;&amp; visited[v] === <span class="literal">false</span> &amp;&amp; <span class="keyword">this</span>.graph[u][v] &lt; key[v]) &#123;</span><br><span class="line">				<span class="comment">/* 保存MST路径 */</span></span><br><span class="line">				parent[v] = u;</span><br><span class="line">				<span class="comment">/* 更新其权值 */</span></span><br><span class="line">				key[v] = <span class="keyword">this</span>.graph[u][v];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/* 返回包含MST的结果 */</span></span><br><span class="line">	<span class="keyword">return</span> parent;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>对上节开始的图执行以上算法，会得到如下输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Edge  Weight</span><br><span class="line">0 - 1 2</span><br><span class="line">1 - 2 2</span><br><span class="line">5 - 3 2</span><br><span class="line">1 - 4 2</span><br><span class="line">4 - 5 2</span><br></pre></td></tr></table></figure>
+<h3 id="9-6-2-Kruskal-算法"><a href="#9-6-2-Kruskal-算法" class="headerlink" title="9.6.2 Kruskal 算法"></a>9.6.2 Kruskal 算法</h3><p>和Prim算法类似，Kruskal算法也是一种求加权无向连通图的MST的贪心算法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.kruskal = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> length = <span class="keyword">this</span>.graph.length,</span><br><span class="line">		parent = [],</span><br><span class="line">		cost,</span><br><span class="line">		ne = <span class="number">0</span>,</span><br><span class="line">		a,</span><br><span class="line">		b,</span><br><span class="line">		u,</span><br><span class="line">		v,</span><br><span class="line">		i,</span><br><span class="line">		j,</span><br><span class="line">		min;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/* 把邻接矩阵的值复制个cost数组 */</span></span><br><span class="line">	cost = initializeCost();</span><br><span class="line"></span><br><span class="line">	<span class="comment">/* 当MST的边数小于顶点总数减1时 */</span></span><br><span class="line">	<span class="keyword">while</span> (ne &lt; length - <span class="number">1</span>) &#123;</span><br><span class="line">		<span class="comment">/* 找出权值最小的边 */</span></span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>; min = INF; i &lt; length; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; length; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (cost[i][j] &lt; min) &#123;</span><br><span class="line">					min = cost[i][j];</span><br><span class="line">					u = i;</span><br><span class="line">					v = j;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/* 检查MST中是否已存在这条边，以避免环路 */</span></span><br><span class="line">		u = find(u, parent);</span><br><span class="line">		v = find(v, parent);</span><br><span class="line"></span><br><span class="line">		<span class="comment">/* 如果u和v是不同的边，则将其加入MST */</span></span><br><span class="line">		<span class="keyword">if</span> (union(u, v, parent)) &#123;</span><br><span class="line">			ne++;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/* 从列表中移除这些边，以免重复计算 */</span></span><br><span class="line">		cost[u][v] = cost[v][u] = INF;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> parent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>下面是find函数的定义。它能防止MST出现环路<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> find = <span class="function"><span class="keyword">function</span>(<span class="params">i, parent</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (parent[i]) &#123;</span><br><span class="line">		i = parent[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> i;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>union函数定义如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> union = <span class="function"><span class="keyword">function</span>(<span class="params">i, j, parent</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (i !== j) &#123;</span><br><span class="line">		parent[j] = i;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+
+<!-- 20181125 Google Ad -->
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+  style="display:block; text-align:center;"
+  data-ad-layout="in-article"
+  data-ad-format="fluid"
+  data-ad-client="ca-pub-7996247261670961"
+  data-ad-slot="9091093676"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!-- 20181125 Google Ad -->
+
+<!-- 20171118 -->
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"Dark Wing's Personal Website","bdMini":"1","bdMiniList":false,"bdPic":"Dark Wing's Personal Website","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["sqq","qzone","tsina","tqf","weixin","fbook","twi","linkedin","copy"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["sqq","qzone","tsina","tqf","weixin","fbook","twi","linkedin","copy"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!-- 20171118 -->
+
+<!-- 20171030 -->
+<!-- 实验室 -->
+<!-- <center>
+<div id="cyReward" role="cylabs" data-use="reward"></div>
+</center> -->
+<!-- 20171030 -->
+
+<!-- 20180111 熊掌号 -->
+<!-- <div style="padding-left: 17px; padding-right: 17px;">
+    <script>cambrian.render('tail')</script>
+</div> -->
+<!-- 20180111 熊掌号 -->
+
+        </div>
+      </div>
+    </div>
+    
+<!-- 20171030 -->
+<!--PC和WAP自适应版-->
+<!-- <div id="SOHUCS" sid="学习《JavaScript 数据结构与算法》读书笔记-第9章-图"></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = 'cyti5JxXc'; 
+var conf = 'prod_b92a4c7254fbe603176fd52ee04c6071'; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script> -->
+<!-- <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cyti5JxXc"></script> -->
+<!-- 20171030 -->
+
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <!-- 20170814 -->
+  <div class="row">
+  	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" id="statistics" style="position:absolute;top:180px;left:30px"><script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=55rwupqghxb&amp;m=7&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script><!-- <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=55rwupqghxb&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script> --></div>
+  </div>
+  <!-- 20170814 -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Copyright &copy; 2017 - 2019 Dark Wing
+          <a target="_blank" href="beian.miit.gov.cn">冀ICP备17006927号</a>
+        </p>
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+			hljs.configure({
+				languages: ['javascript', 'css', 'html', 'scss', 'python'],
+			});
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
