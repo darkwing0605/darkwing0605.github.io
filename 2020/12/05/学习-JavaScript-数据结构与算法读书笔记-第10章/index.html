@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="darkwing0605">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="学习《JavaScript 数据结构与算法》读书笔记-第10章-排序和搜索算法"/>
+  <meta property="og:description" content="Dark Wing&amp;apos;s Personal Website" />
+  <meta property="og:site_name" content="Dark Wing"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://www.dark-wing.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Dark Wing" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Dark Wing-学习《JavaScript 数据结构与算法》读书笔记-第10章-排序和搜索算法</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+    <!-- <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-114678369-1', 'auto');
+        ga('send', 'pageview');
+    </script> -->
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-114678369-1'></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-114678369-1');
+		</script>
+
+
+  
+  <!-- 20170930 Google Console-->
+  <!-- 自动广告 -->
+  <!--
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-7996247261670961",
+      enable_page_level_ads: true
+    });
+  </script>
+
+  <meta name="google-site-verification" content="oD5ewjXVO5xIeD-HOx5LlcHxqeWfTgEO2IS491uxZ8c" />
+  -->
+  <!-- 20170930 -->
+  <!-- 20171007 百度统计-->
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9951afff4e34f23d370bf6958eaab534";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  <!-- 20171007 -->
+  <!-- 20180111 熊掌号 -->
+  <!-- <script src="//msite.baidu.com/sdk/c.js?appid=1589014467202518"></script> -->
+  <!-- 20180111 熊掌号 -->
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">学习《JavaScript 数据结构与算法》读书笔记-第10章-排序和搜索算法</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/darkwing0605">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:darkwing@dark-wing.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By darkwing0605</span>
+          
+          <!-- Date -->
+          <span class="date-time info">Created On
+            <span class="date">2020-12-05</span>
+            <span class="time">18:08:41</span>
+          </span>
+          
+            <span class="date-time info">Updated On
+              <span class="date">2020-12-05</span>
+              <span class="time">18:08:41</span>
+            </span>
+          
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/Article/">Article</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/《JavaScript-数据结构与算法》读书笔记/">#《JavaScript 数据结构与算法》读书笔记</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>学习《JavaScript 数据结构与算法》读书笔记</p>
+<a id="more"></a>
+<h1 id="10-排序和搜索算法"><a href="#10-排序和搜索算法" class="headerlink" title="10 排序和搜索算法"></a>10 排序和搜索算法</h1><h2 id="10-1-排序算法"><a href="#10-1-排序算法" class="headerlink" title="10.1 排序算法"></a>10.1 排序算法</h2><p>先创建一个数组（列表）来表示待排序和搜索的数据结构<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ArrayList</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> array = [];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">this</span>.insert = <span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</span><br><span class="line">    array.push(item);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">this</span>.toString = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> array.join();</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="10-1-1-冒泡算法"><a href="#10-1-1-冒泡算法" class="headerlink" title="10.1.1 冒泡算法"></a>10.1.1 冒泡算法</h3><p>冒泡算法在所有排序算法中最简单。然而从运行时间的角度来看，冒泡排序是最差的一个。<br>冒泡排序比较任何两个相邻的项，如果第一个比第二个大，则交换它们。元素项向上移动至正确的顺序，就好像气泡升至表面一样。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.bubbleSort = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> length = array.length;</span><br><span class="line">  <span class="comment">// 外循环，控制了在数组中经历了多少轮排序</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">    <span class="comment">// 内循环，从第一个迭代至倒数第二位</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; length - <span class="number">1</span>; j++) &#123;</span><br><span class="line">      <span class="comment">// 判断顺序（当前项是否比下一项大）</span></span><br><span class="line">      <span class="keyword">if</span> (array[j] &gt; array[j + <span class="number">1</span>]) &#123;</span><br><span class="line">        <span class="comment">// 如果顺序不对，交换</span></span><br><span class="line">        swap(array, j, j + <span class="number">1</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>再声明swap函数（一个私有函数，只能用在ArrayList类的内部代码中）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> swap = <span class="function"><span class="keyword">function</span>(<span class="params">array, index1, index2</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> aux = array[index1];</span><br><span class="line">  array[index1] = array[index2];</span><br><span class="line">  array[index2] = aux;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>如果使用 <code>ES6（ECMAScript2015）</code> 增强的对象属性，这个函数可以写成下面这样</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[array[index1], array[index2]] = [array[index2], array[index1]];</span><br></pre></td></tr></table></figure>
+<p>测试</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createNonSortedArray</span>(<span class="params">size</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> array = <span class="keyword">new</span> ArrayList();</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = size; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">    array.insert(i);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> array = createNonSortedArray(<span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(array.toString());</span><br><span class="line">array.bubbleSort();</span><br><span class="line"><span class="built_in">console</span>.log(array.toString());</span><br></pre></td></tr></table></figure>
+<p>改进后的冒泡排序</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.modifiedBubbleSort = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> length = array.length;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; length - <span class="number">1</span> - i; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (array[j] &gt; array[j + <span class="number">1</span>]) &#123;</span><br><span class="line">        swap(j, j + <span class="number">1</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="10-1-2-选择排序"><a href="#10-1-2-选择排序" class="headerlink" title="10.1.2 选择排序"></a>10.1.2 选择排序</h3><p>找到数据结构中的最小值并将其放置在第一位，接着找到第二小的值并将其放在第二位，以此类推。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.selectionSort = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> length = array.length,</span><br><span class="line">    indexMin;</span><br><span class="line">  <span class="comment">/* 迭代数组，并控制迭代轮次 */</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="comment">/* 假设本本迭代轮次第一个值为数组最小值 */</span></span><br><span class="line">    indexMin = i;</span><br><span class="line">    <span class="comment">/* 从当前i的值开始至数组结束 */</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = i; j &lt; length; j++) &#123;</span><br><span class="line">      <span class="comment">/* 比较位置j的值和当前最小值 */</span></span><br><span class="line">      <span class="keyword">if</span> (array[indexMin] &gt; array[j]) &#123;</span><br><span class="line">        <span class="comment">/* 更新最小值 */</span></span><br><span class="line">        indexMin = j;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* 内循环结束，如果该最小值和原最小值不同，则交换 */</span></span><br><span class="line">    <span class="keyword">if</span> (i !== indexMin) &#123;</span><br><span class="line">     swap(i, indexMin);</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>测试</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">array = createNonSortedArray(<span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(array.toString());</span><br><span class="line">array.selectionSort();</span><br><span class="line"><span class="built_in">console</span>.log(array.toString());</span><br></pre></td></tr></table></figure>
+<h3 id="10-1-3插入排序"><a href="#10-1-3插入排序" class="headerlink" title="10.1.3插入排序"></a>10.1.3插入排序</h3><p>插入排序每次排一个数组项，以此方式构建最后的排序数组。<br>排序小型数组时，此算法比选择排序和冒泡排序性能要好。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.insertionSort = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> length = array.length;</span><br><span class="line">    j,</span><br><span class="line">    temp;</span><br><span class="line">  <span class="comment">/* 迭代数组给第i项找到正确的位置 */</span></span><br><span class="line">  <span class="comment">/* 从第二个位置开始，我们认为第一项已经排序了 */</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; length; i++) &#123;</span><br><span class="line">    j = i;</span><br><span class="line">    temp = array[i];</span><br><span class="line">    <span class="comment">/* 只要j比0大，且数组中前面的值比待比较值大 */</span></span><br><span class="line">    <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; array[j - <span class="number">1</span>] &gt; temp) &#123;</span><br><span class="line">      <span class="comment">/* 我们就把这个值移到当前位置上 */</span></span><br><span class="line">      array[j] = array[j - <span class="number">1</span>];</span><br><span class="line">      <span class="comment">/* 并减小j */</span></span><br><span class="line">      j--;</span><br><span class="line">    &#125;</span><br><span class="line">    array[j] = temp;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="10-1-4-归并排序"><a href="#10-1-4-归并排序" class="headerlink" title="10.1.4 归并排序"></a>10.1.4 归并排序</h3><p>归并排序是第一个可以被实际使用的排序算法</p>
+<p>归并排序是一种分治算法。其思想是将原始数组切分成较小的数组，直到每个小数组只有一个位置，接着将小数组归并成较大的数组，知道最后只有个一个排序完毕的大数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.mergeSort = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  array.mergeSortRec(array);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mergeSortRec = <span class="function"><span class="keyword">function</span>(<span class="params">array</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> length = array.length;</span><br><span class="line">  <span class="keyword">if</span> (length === <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> array;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">var</span> mid = <span class="built_in">Math</span>.floor(length / <span class="number">2</span>),</span><br><span class="line">    left = array.slice(<span class="number">0</span>, mid),</span><br><span class="line">    right = array.slice(mid,length);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> merge(mergeSortRec(left), mergeSortRec(right));</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> merge = <span class="function"><span class="keyword">function</span>(<span class="params">left, right</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> result = [],</span><br><span class="line">    il = <span class="number">0</span>,</span><br><span class="line">    ir = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (il &lt; left.length &amp;&amp; ir &lt; right.length) &#123;</span><br><span class="line">    <span class="keyword">if</span> (left[il] &lt; right[rl]) &#123;</span><br><span class="line">      result.push(left[il++]);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      result.push(right[ir++]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (il &lt; left.length) &#123;</span><br><span class="line">    result.push(left[il++]);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (ir &lt; right.length) &#123;</span><br><span class="line">    result.push(right[ir++]);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="10-1-5-快速排序"><a href="#10-1-5-快速排序" class="headerlink" title="10.1.5 快速排序"></a>10.1.5 快速排序</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.quickSort = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  quice(array, <span class="number">0</span>, array.length - <span class="number">1</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> quick = <span class="function"><span class="keyword">function</span>(<span class="params">array, left, right</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> index;</span><br><span class="line">  <span class="keyword">if</span> (array.length &gt; <span class="number">1</span>) &#123;</span><br><span class="line">    index = partition(array, left, right);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (left &lt; index - <span class="number">1</span>) &#123;</span><br><span class="line">      quice(array, left, index - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (index &lt; right) &#123;</span><br><span class="line">      quice(array, index, right);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> partition = <span class="function"><span class="keyword">function</span>(<span class="params">array, left, right</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> pivot = array[<span class="built_in">Math</span>.floor((right + left) / <span class="number">2</span>)],</span><br><span class="line">    i = left,</span><br><span class="line">    j = right;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (i &lt;= j) &#123;</span><br><span class="line">    <span class="keyword">while</span> (array[i] &lt; pivot) &#123;</span><br><span class="line">      i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (array[j] &gt; pivot) &#123;</span><br><span class="line">      j--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (i &lt;= j) &#123;</span><br><span class="line">      swap(array, i, j);</span><br><span class="line">      i++;</span><br><span class="line">      j--;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> i;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="10-1-6-堆排序"><a href="#10-1-6-堆排序" class="headerlink" title="10.1.6 堆排序"></a>10.1.6 堆排序</h3><p>堆排序也是一种很高效的算法，因其把数组当做二叉树来排序而得名。这个算法会根据以下信息，把数组当做二叉树来管理</p>
+<blockquote>
+<p>索引0是树的根节点</p>
+<p>除根节点外，任意节点N的父节点是 N / 2</p>
+<p>节点L的左子节点是 2 * L</p>
+<p>节点R的右子节点是 2 * R + 1</p>
+</blockquote>
+<p>堆排序算法实现如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.heapSort = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> heapSize = array.length;</span><br><span class="line">  <span class="comment">/* 构造一个满足 array[parent(i)] &gt;= array[i] 的堆结构 */</span></span><br><span class="line">  buildHeap(array);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (heapSize &gt; <span class="number">1</span>) &#123;</span><br><span class="line">    heapSize--;</span><br><span class="line">    <span class="comment">/* 交换堆里第一个元素（数组中较大的值）和最后一个元素的位置 */</span></span><br><span class="line">    swap(array, <span class="number">0</span>, heapSize);</span><br><span class="line">    <span class="comment">/* 再次将数组转换成堆 */</span></span><br><span class="line">    heapify(array, heapSize, <span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> buildHeap = <span class="function"><span class="keyword">function</span>(<span class="params">array</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> headSize = array.length;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="built_in">Math</span>.floor(array.length / <span class="number">2</span>); i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">    heapify(array, headSize, i);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> heapify = <span class="function"><span class="keyword">function</span>(<span class="params">array, heapSize, i</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> left = i * <span class="number">2</span> + <span class="number">1</span>,</span><br><span class="line">    right = i * <span class="number">2</span> + <span class="number">2</span>,</span><br><span class="line">    largest = i;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (left &lt; headSize &amp;&amp; array[left] &gt; array[largest]) &#123;</span><br><span class="line">    largest = left;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (right &lt; heapSize &amp;&amp; array[right] &gt; array[largest]) &#123;</span><br><span class="line">    largest = right;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (largest !== i) &#123;</span><br><span class="line">    swap(array, i, largest);</span><br><span class="line">    heapify(array, heapSize, largest);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="10-1-7-计数排序、桶排序和基数排序（分布式排序）"><a href="#10-1-7-计数排序、桶排序和基数排序（分布式排序）" class="headerlink" title="10.1.7 计数排序、桶排序和基数排序（分布式排序）"></a>10.1.7 计数排序、桶排序和基数排序（分布式排序）</h3><p>还有一类被称为分布式排序的算法，原始数组中的数据会分发到多个中间结构（桶），再合起来放回原始数组。<br>最著名的分布式算法有计数排序、桶排序和基数排序<br><a href="https://github.com/loiane/javascript-datastructures-algorithms" target="_blank" rel="external">例子</a></p>
+<h2 id="10-2-搜索算法"><a href="#10-2-搜索算法" class="headerlink" title="10.2 搜索算法"></a>10.2 搜索算法</h2><h3 id="10-2-1-顺序搜索"><a href="#10-2-1-顺序搜索" class="headerlink" title="10.2.1 顺序搜索"></a>10.2.1 顺序搜索</h3><p>顺序或线性搜索是最基本的搜索算法。它的机制是，将每一个数据结构中的元素和我们要找的元素做比较。顺序搜索是最低效的一种搜索算法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.sequentialSearch = <span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (item === array[i]) &#123;</span><br><span class="line">      <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="10-2-2-二分搜索"><a href="#10-2-2-二分搜索" class="headerlink" title="10.2.2 二分搜索"></a>10.2.2 二分搜索</h3><p>这个算法要求被搜索的数据结构已排序。以下是该算法遵循的步骤：</p>
+<ol>
+<li>选择数组的中间值</li>
+<li>如果选中的值是待搜索值，那么算法执行完毕（值找到了）</li>
+<li>如果待搜索值比选中值要小，则返回步骤1并在选中值左边的子数组中寻找</li>
+<li>如果待搜索值比选中值要大，则返回不走1并在选中值右边的子数组中寻找</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.binarySearch = <span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.quickSort();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> low = <span class="number">0</span>,</span><br><span class="line">    high = array.length - <span class="number">1</span>,</span><br><span class="line">    mid,</span><br><span class="line">    element;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (low &lt;= high) &#123;</span><br><span class="line">    mid = <span class="built_in">Math</span>.floor((low + high) / <span class="number">2</span>);</span><br><span class="line">    element = array(mid);</span><br><span class="line">    <span class="keyword">if</span> (element &lt; item) &#123;</span><br><span class="line">      low = mid + <span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (element &gt; item) &#123;</span><br><span class="line">      high = mid - <span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> mid;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<!-- 20181125 Google Ad -->
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+  style="display:block; text-align:center;"
+  data-ad-layout="in-article"
+  data-ad-format="fluid"
+  data-ad-client="ca-pub-7996247261670961"
+  data-ad-slot="9091093676"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!-- 20181125 Google Ad -->
+
+<!-- 20171118 -->
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"Dark Wing's Personal Website","bdMini":"1","bdMiniList":false,"bdPic":"Dark Wing's Personal Website","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["sqq","qzone","tsina","tqf","weixin","fbook","twi","linkedin","copy"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["sqq","qzone","tsina","tqf","weixin","fbook","twi","linkedin","copy"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!-- 20171118 -->
+
+<!-- 20171030 -->
+<!-- 实验室 -->
+<!-- <center>
+<div id="cyReward" role="cylabs" data-use="reward"></div>
+</center> -->
+<!-- 20171030 -->
+
+<!-- 20180111 熊掌号 -->
+<!-- <div style="padding-left: 17px; padding-right: 17px;">
+    <script>cambrian.render('tail')</script>
+</div> -->
+<!-- 20180111 熊掌号 -->
+
+        </div>
+      </div>
+    </div>
+    
+<!-- 20171030 -->
+<!--PC和WAP自适应版-->
+<!-- <div id="SOHUCS" sid="学习《JavaScript 数据结构与算法》读书笔记-第10章-排序和搜索算法"></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = 'cyti5JxXc'; 
+var conf = 'prod_b92a4c7254fbe603176fd52ee04c6071'; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script> -->
+<!-- <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cyti5JxXc"></script> -->
+<!-- 20171030 -->
+
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <!-- 20170814 -->
+  <div class="row">
+  	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" id="statistics" style="position:absolute;top:180px;left:30px"><script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=55rwupqghxb&amp;m=7&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script><!-- <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=55rwupqghxb&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script> --></div>
+  </div>
+  <!-- 20170814 -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Copyright &copy; 2017 - 2019 Dark Wing
+          <a target="_blank" href="beian.miit.gov.cn">冀ICP备17006927号</a>
+        </p>
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+			hljs.configure({
+				languages: ['javascript', 'css', 'html', 'scss', 'python'],
+			});
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
